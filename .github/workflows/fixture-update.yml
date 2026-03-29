@@ -36,7 +36,7 @@ jobs:
 
       - name: Create issue for large fixture drift
         if: github.event_name == 'schedule' && steps.diff.outputs.total_lines != '0' && fromJSON(steps.diff.outputs.total_lines) > 200
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         with:
           script: |
             const title = 'Fixture drift exceeded threshold';
