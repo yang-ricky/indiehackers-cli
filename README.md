@@ -137,42 +137,15 @@ ih doctor --json
 
 Network errors now include the failing URL, which makes it easier to see whether the problem is the main site, RSS source, or Firebase.
 
-## Development
-
-For local development from a checkout:
-
-```bash
-git clone https://github.com/yang-ricky/indiehackers-cli.git
-cd indiehackers-cli
-npm ci
-npm run build
-node dist/index.js --help
-```
-
-Full local verification:
-
-```bash
-npm ci
-npm run lint
-npm run typecheck
-npm run test
-npm run build
-```
-
-Useful scripts:
-
-```bash
-npm run test:live
-npm run selector:health
-npm run fixtures:update
-npm run pack:check
-```
-
 ## Disclaimer
 
 This is an unofficial tool and is not affiliated with Indie Hackers.
 
 It targets public pages and public Firebase endpoints only. HTML selectors and unofficial feed sources can break when the site changes.
+
+If Indie Hackers eventually offers an official REST or GraphQL API, the CLI can switch to that backend without changing the user-facing commands.
+
+Cookie reverse engineering is intentionally avoided because it is brittle, harder to maintain, more likely to break on auth or CSRF changes, and is a poor fit for a public npm CLI.
 
 ## License
 
