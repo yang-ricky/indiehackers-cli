@@ -1,0 +1,19 @@
+{
+  "files": {
+    "includes": ["**", "!dist", "!node_modules", "!.claude"]
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space"
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "single"
+    }
+  },
+  "json": {
+    "formatter": {
+      "indentStyle": "space"
+    }
+  }
+}

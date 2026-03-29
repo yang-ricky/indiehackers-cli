@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Posts IndieHackers</title>
+    <item>
+      <title><![CDATA[Test Post One]]></title>
+      <link>https://feed.indiehackers.world/post/be6a4175e1</link>
+      <guid>https://feed.indiehackers.world/post/be6a4175e1</guid>
+      <pubDate>Fri, 27 Mar 2026 06:16:57 GMT</pubDate>
+      <dc:creator>alice</dc:creator>
+      <category>Growth</category>
+    </item>
+    <item>
+      <title><![CDATA[Test Post Two]]></title>
+      <link>https://feed.indiehackers.world/post/48484df11b</link>
+      <guid>https://feed.indiehackers.world/post/48484df11b</guid>
+      <pubDate>Thu, 26 Mar 2026 18:06:57 GMT</pubDate>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,22 @@
+{
+  "id": "be6a4175e1",
+  "title": "How I validated the idea",
+  "url": "https://www.indiehackers.com/post/validate-idea-be6a4175e1",
+  "author": "alice",
+  "date": "March 29, 2026",
+  "commentCount": 15,
+  "score": 42,
+  "body": "I talked to users before writing code.\n\nThat changed everything.",
+  "comments": [
+    {
+      "author": "bob",
+      "body": "First comment",
+      "date": "Saturday, March 29th 2026 (10:00 am)"
+    },
+    {
+      "author": "carol",
+      "body": "Second comment",
+      "date": "Saturday, March 29th 2026 (10:15 am)"
+    }
+  ]
+}
