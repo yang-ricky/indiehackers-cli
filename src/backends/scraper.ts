@@ -8,19 +8,26 @@ import type { ResolvedConfig } from '../config.js';
 import {
   IH_BASE_URL,
   IH_FIREBASE_DB_URL,
+  IH_RSS_FALLBACK_URLS,
+  IH_RSS_URL,
   KNOWN_POST_SLUG,
+  KNOWN_PRODUCT_SLUG,
 } from '../constants.js';
-import { CLIError, NotFoundError } from '../errors.js';
+import { CLIError, NetworkError, NotFoundError } from '../errors.js';
 import { HttpClient } from '../http.js';
 import type { Post, PostDetail, Product, User } from '../models/index.js';
 import {
   parseLatestPostsFromHtml,
   parsePostDetailFromHtml,
 } from '../parsers/post.js';
-import { productFromFirebaseRecord } from '../parsers/product.js';
+import {
+  parseProductFromHtml,
+  productFromFirebaseRecord,
+} from '../parsers/product.js';
 import { parseRssFeed } from '../parsers/rss.js';
 import {
   buildPostUrl,
+  buildProductUrl,
   compactObject,
   extractPostId,
   extractProductSlug,
@@ -55,6 +62,12 @@ interface FirebaseUserRecord {
   fullName?: string;
   name?: string;
   username?: string;
+}
+
+interface RssProbeResult {
+  items: number;
+  responseTimeMs: number;
+  url: string;
 }
 
 export interface ScraperBackendOptions {
@@ -118,9 +131,17 @@ export class ScraperBackend implements Backend {
     }
 
     const postId = extractPostId(slug);
-    const firebase = await this.http.getJson<FirebasePostRecord | null>(
-      `${IH_FIREBASE_DB_URL}/posts/${postId}.json`,
-    );
+    const firebase = await this.http
+      .getJson<FirebasePostRecord | null>(
+        `${IH_FIREBASE_DB_URL}/posts/${postId}.json`,
+      )
+      .catch((error) => {
+        if (htmlDetail) {
+          return null;
+        }
+
+        throw error;
+      });
 
     if (!firebase && !htmlDetail) {
       throw new NotFoundError(`Post not found: ${slug}`);
@@ -157,30 +178,62 @@ export class ScraperBackend implements Backend {
       return cached;
     }
 
-    const productRecord = await this.http.getJson<FirebaseProductRecord | null>(
-      `${IH_FIREBASE_DB_URL}/products/${slug}.json`,
-    );
+    const productUrl = buildProductUrl(slug);
+    let firebaseError: unknown;
+    let htmlError: unknown;
+    const productRecord = await this.http
+      .getJson<FirebaseProductRecord | null>(
+        `${IH_FIREBASE_DB_URL}/products/${slug}.json`,
+      )
+      .catch((error) => {
+        firebaseError = error;
+        return null;
+      });
 
-    if (!productRecord) {
-      throw new NotFoundError(`Product not found: ${slug}`);
+    let product: Product | undefined;
+
+    if (productRecord) {
+      const stats = await this.http
+        .getJson<FirebaseProductStats | null>(
+          `${IH_FIREBASE_DB_URL}/indexes/productStats/${slug}.json`,
+        )
+        .catch(() => null);
+
+      const founderId = Object.keys(productRecord.userRoles ?? {}).at(0);
+      const founder = founderId
+        ? await this.getUserLabel(founderId).catch(() => undefined)
+        : undefined;
+
+      product = compactObject({
+        ...productFromFirebaseRecord(slug, productRecord),
+        maker: founder,
+        revenue: stats?.revenue ?? stats?.monthlyRevenue,
+      });
     }
 
-    const stats = await this.http
-      .getJson<FirebaseProductStats | null>(
-        `${IH_FIREBASE_DB_URL}/indexes/productStats/${slug}.json`,
-      )
-      .catch(() => null);
+    if (!product) {
+      const html = await this.http.getText(productUrl).catch(() => null);
 
-    const founderId = Object.keys(productRecord.userRoles ?? {}).at(0);
-    const founder = founderId
-      ? await this.getUserLabel(founderId).catch(() => undefined)
-      : undefined;
+      if (html) {
+        try {
+          product = parseProductFromHtml(html, productUrl);
+        } catch (error) {
+          htmlError = error;
+        }
+      }
+    }
 
-    const product = compactObject({
-      ...productFromFirebaseRecord(slug, productRecord),
-      maker: founder,
-      revenue: stats?.revenue ?? stats?.monthlyRevenue,
-    });
+    if (!product) {
+      if (firebaseError instanceof Error) {
+        throw firebaseError;
+      }
+
+      if (htmlError instanceof Error) {
+        throw htmlError;
+      }
+
+      throw new NotFoundError(`Product not found: ${slug}`);
+    }
 
     await this.setCached('product', slug, product);
     return product;
@@ -191,15 +244,15 @@ export class ScraperBackend implements Backend {
     const homeHtml = await this.http.getText(IH_BASE_URL).catch(() => null);
     const websiteResponseTime = homeHtml ? Date.now() - websiteStart : null;
 
-    const rssStart = Date.now();
-    const rssXml = await this.http
-      .getText(this.options.config.rss.url)
-      .catch(() => null);
-    const rssResponseTime = rssXml ? Date.now() - rssStart : null;
-    const rssItems = rssXml ? (await parseRssFeed(rssXml)).length : null;
+    const rssProbe = await this.probeRss();
 
     const postHtml = await this.http
       .getText(buildPostUrl(KNOWN_POST_SLUG))
+      .catch(() => null);
+    const firebaseProduct = await this.http
+      .getJson<FirebaseProductRecord | null>(
+        `${IH_FIREBASE_DB_URL}/products/${KNOWN_PRODUCT_SLUG}.json`,
+      )
       .catch(() => null);
     const homeFeedMatches =
       !!homeHtml && parseLatestPostsFromHtml(homeHtml).length > 0;
@@ -234,15 +287,15 @@ export class ScraperBackend implements Backend {
       },
       connectivity: {
         responseTimeMs: websiteResponseTime,
-        rssItems,
-        rssResponseTimeMs: rssResponseTime,
+        rssItems: rssProbe?.items ?? null,
+        rssResponseTimeMs: rssProbe?.responseTimeMs ?? null,
         websiteReachable: !!homeHtml,
       },
       fixes: buildFixes({
         homeFeedMatches,
         postPageMatches,
         productCardsMatch,
-        rssReachable: !!rssXml,
+        rssReachable: !!rssProbe,
         writable,
       }),
       knownIssues: [],
@@ -256,17 +309,18 @@ export class ScraperBackend implements Backend {
           status: homeFeedMatches && postPageMatches ? 'active' : 'degraded',
         },
         {
-          detail: rssXml
-            ? `Unofficial RSS reachable with ${rssItems ?? 0} items.`
+          detail: rssProbe
+            ? `Unofficial RSS reachable at ${rssProbe.url} with ${rssProbe.items} items.`
             : 'Unofficial RSS is unreachable.',
           name: 'rss',
-          status: rssXml ? 'active' : 'degraded',
+          status: rssProbe ? 'active' : 'degraded',
         },
         {
-          detail:
-            'Realtime Database endpoints for posts and products are publicly readable.',
+          detail: firebaseProduct
+            ? `Realtime Database is reachable for ${KNOWN_PRODUCT_SLUG}.`
+            : 'Realtime Database probe failed for the known product endpoint.',
           name: 'firebase',
-          status: 'active',
+          status: firebaseProduct ? 'active' : 'unavailable',
         },
       ],
       selectors: {
@@ -290,9 +344,28 @@ export class ScraperBackend implements Backend {
   }
 
   private async getLatestViaRss(limit: number, page: number): Promise<Post[]> {
-    const xml = await this.http.getText(this.options.config.rss.url);
-    const posts = await parseRssFeed(xml);
-    return paginate(posts, limit, page);
+    let lastError: unknown;
+
+    for (const url of this.getRssCandidateUrls()) {
+      try {
+        const xml = await this.http.getText(url);
+        const posts = await parseRssFeed(xml);
+
+        if (posts.length > 0) {
+          return paginate(posts, limit, page);
+        }
+
+        lastError = new NetworkError(`RSS feed returned no items: ${url}`);
+      } catch (error) {
+        lastError = error;
+      }
+    }
+
+    if (lastError instanceof Error) {
+      throw lastError;
+    }
+
+    throw new NetworkError('No reachable RSS feed candidates were found.');
   }
 
   private async getLatestViaHtml(limit: number, page: number): Promise<Post[]> {
@@ -330,6 +403,35 @@ export class ScraperBackend implements Backend {
     );
 
     return userRecord?.fullName || userRecord?.name || userRecord?.username;
+  }
+
+  private getRssCandidateUrls(): string[] {
+    return [
+      ...new Set([
+        this.options.config.rss.url,
+        IH_RSS_URL,
+        ...IH_RSS_FALLBACK_URLS,
+      ]),
+    ];
+  }
+
+  private async probeRss(): Promise<RssProbeResult | null> {
+    for (const url of this.getRssCandidateUrls()) {
+      const startedAt = Date.now();
+
+      try {
+        const xml = await this.http.getText(url);
+        const items = (await parseRssFeed(xml)).length;
+
+        return {
+          items,
+          responseTimeMs: Date.now() - startedAt,
+          url,
+        };
+      } catch {}
+    }
+
+    return null;
   }
 }
 

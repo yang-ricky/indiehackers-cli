@@ -7,8 +7,13 @@ export const IH_USER_URL = (username: string) => `${IH_BASE_URL}/${username}`;
 export const IH_GROUP_URL = (slug: string) => `${IH_BASE_URL}/group/${slug}`;
 export const IH_FIREBASE_DB_URL = 'https://indie-hackers.firebaseio.com';
 
-// RSS — current unofficial source. As of 2026-03-29, indiehackers.com/feed.xml does not serve RSS.
-export const IH_RSS_URL = 'https://feed.indiehackers.world/posts.rss';
+// RSS — primary unofficial source plus fallbacks. As of 2026-03-29,
+// indiehackers.com/feed.xml does not serve RSS and feed.indiehackers.world
+// currently returns 404 for /posts.rss.
+export const IH_RSS_URL = 'https://ihrss.io/newest';
+export const IH_RSS_FALLBACK_URLS = [
+  'https://feed.indiehackers.world/posts.rss',
+];
 
 // Defaults
 export const DEFAULT_LIMIT = 20;

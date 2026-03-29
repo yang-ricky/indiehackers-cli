@@ -106,7 +106,13 @@ export class HttpClient {
     }
 
     if (lastError instanceof Error) {
-      throw new NetworkError(lastError.message);
+      if (lastError.name === 'AbortError') {
+        throw new NetworkError(
+          `Request timed out after ${this.options.timeoutMs}ms for ${url}`,
+        );
+      }
+
+      throw new NetworkError(`Failed to fetch ${url}: ${lastError.message}`);
     }
 
     throw new NetworkError(`Request failed for ${url}`);
