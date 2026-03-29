@@ -1,11 +1,10 @@
 # indiehackers-cli
 
-A command-line interface for public [Indie Hackers](https://www.indiehackers.com) data. Browse the latest posts, inspect post threads, view product profiles, and diagnose scraper health directly from your terminal.
+A command-line interface for public [Indie Hackers](https://www.indiehackers.com) data.
 
-This CLI is scraper-first:
-- `latest` prefers RSS and falls back to the homepage HTML
-- `post` merges post-page HTML with public Firebase data
-- `product` prefers public Firebase data and falls back to HTML when possible
+Browse the latest posts, inspect post threads, view product profiles, and diagnose scraper health directly from your terminal.
+
+No login, token, or API key is required.
 
 ## Install
 
@@ -17,6 +16,8 @@ npm install -g indiehackers-cli
 
 Requires **Node.js >= 20**.
 
+No extra setup is required after installation.
+
 After installation, both command names are available:
 
 ```bash
@@ -24,24 +25,11 @@ ih --help
 indiehackers --help
 ```
 
-For local development from a checkout:
-
-```bash
-git clone https://github.com/yang-ricky/indiehackers-cli.git
-cd indiehackers-cli
-npm ci
-npm run build
-node dist/index.js --help
-```
-
 ## Quick Start
 
 ```bash
-# Latest posts
+# No auth step needed
 ih latest --limit 5
-
-# Same query as JSON
-ih latest --limit 5 --json
 
 # View a post thread
 ih post be6a4175e1
@@ -51,9 +39,6 @@ ih product offero --json
 
 # Check connectivity, cache, and selector health
 ih doctor --json
-
-# Inspect resolved configuration
-ih config show
 ```
 
 ## Commands
@@ -89,19 +74,10 @@ ih config show
 ### Examples
 
 ```bash
-# Latest posts as JSON
-ih latest --limit 3 --json
-
-# Inspect a post by short id
-ih post be6a4175e1 --json
-
-# Inspect a product by slug
-ih product offero --json
-
 # Pipe into jq
 ih latest --limit 5 --json | jq '.data[0].title'
 
-# Change retry behavior
+# Tweak retry behavior only if needed
 ih config set request.retries 5
 
 # Disable cache for a single shell session
@@ -132,39 +108,18 @@ The CLI respects `NO_COLOR` and `FORCE_COLOR`.
 
 ## Configuration
 
-Config is resolved in this order:
+Configuration is optional. The CLI works out of the box with built-in defaults.
 
-1. CLI flags
-2. Environment variables prefixed with `IH_`
-3. `~/.indiehackers-cli/config.yaml`
-4. Built-in defaults
-
-Common environment variables:
+If you want to inspect or tweak behavior:
 
 ```bash
-IH_CACHE_ENABLED=false
-IH_CACHE_DIR=/tmp/ih-cache
-IH_REQUEST_TIMEOUT_MS=15000
-IH_REQUEST_RETRIES=5
-IH_RSS_URL=https://ihrss.io/newest
+ih config show
+ih config set request.retries 5
+ih config set cache.enabled false
+ih config cache-clear
 ```
 
-Common config keys:
-
-```bash
-cache.enabled
-cache.dir
-cache.cacheErrors
-cache.ttl.feed
-cache.ttl.post
-cache.ttl.product
-cache.ttl.user
-request.delayMs
-request.timeoutMs
-request.retries
-request.userAgent
-rss.url
-```
+You can also override settings with environment variables such as `IH_CACHE_ENABLED=false` or `IH_REQUEST_TIMEOUT_MS=15000`.
 
 ## Network Behavior
 
@@ -183,6 +138,18 @@ ih doctor --json
 Network errors now include the failing URL, which makes it easier to see whether the problem is the main site, RSS source, or Firebase.
 
 ## Development
+
+For local development from a checkout:
+
+```bash
+git clone https://github.com/yang-ricky/indiehackers-cli.git
+cd indiehackers-cli
+npm ci
+npm run build
+node dist/index.js --help
+```
+
+Full local verification:
 
 ```bash
 npm ci
