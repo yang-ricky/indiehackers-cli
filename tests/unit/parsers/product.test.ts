@@ -8,7 +8,7 @@ import { parseProductFromHtml } from '../../../src/parsers/product.js';
 describe('parseProductFromHtml', () => {
   it('parses a build-board product card', async () => {
     const html = await readFile(
-      path.join(process.cwd(), 'tests/fixtures/html/product-page.html'),
+      path.join(process.cwd(), 'tests/fixtures/html/product-card.sample.html'),
       'utf8',
     );
     const expected = JSON.parse(

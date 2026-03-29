@@ -10,7 +10,10 @@ import {
 } from '../../src/formatter.js';
 import type { Post, PostDetail, Product } from '../../src/models/index.js';
 
-const ANSI_ESCAPE_PATTERN = new RegExp(String.raw`\u001B\[[0-9;]*m`, 'g');
+const ANSI_ESCAPE_PATTERN = new RegExp(
+  `${String.fromCharCode(27)}\\[[0-9;]*m`,
+  'g',
+);
 const stripAnsi = (value: string): string =>
   value.replace(ANSI_ESCAPE_PATTERN, '');
 

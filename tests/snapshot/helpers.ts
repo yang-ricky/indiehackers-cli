@@ -1,7 +1,10 @@
 import { Command } from 'commander';
 import { vi } from 'vitest';
 
-const ANSI_ESCAPE_PATTERN = new RegExp(String.raw`\u001B\[[0-9;]*m`, 'g');
+const ANSI_ESCAPE_PATTERN = new RegExp(
+  `${String.fromCharCode(27)}\\[[0-9;]*m`,
+  'g',
+);
 
 export interface CapturedOutput {
   stderr: string;

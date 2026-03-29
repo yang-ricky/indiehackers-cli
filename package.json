@@ -16,11 +16,18 @@
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
+    "fixtures:update": "node scripts/update-html-fixtures.mjs",
     "typecheck": "tsc --noEmit",
     "lint": "biome check .",
     "lint:fix": "biome check --write .",
+    "pack:check": "npm pack --dry-run",
+    "selector:health": "npm run build && node scripts/check-selector-health.mjs",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:live": "IH_LIVE_TESTS=1 vitest run tests/integration/scraper-backend.test.ts",
+    "test:watch": "vitest",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "changeset publish"
   },
   "repository": {
     "type": "git",
@@ -53,6 +60,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^2.4.9",
+    "@changesets/cli": "^2.30.0",
     "@types/js-yaml": "^4.0.9",
     "@types/node": "^25.5.0",
     "tsup": "^8.5.1",

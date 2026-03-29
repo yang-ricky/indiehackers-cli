@@ -1,60 +1,2361 @@
-<html lang="en">
-  <body>
-    <header class="post-page__header">
-      <h1 class="post-page__title">How I validated the idea</h1>
-      <div class="post-page__byline">
-        by <a class="post-page__byline-author"><span>alice</span></a>
-      </div>
-    </header>
-    <div class="post-page__main">
-      <div class="post-page__body content">
-        <p>I talked to users before writing code.</p>
-        <p>That changed everything.</p>
-      </div>
-    </div>
-    <a class="post-page__date" title="Saturday, March 29th 2026 (9:30 am)">
-      on <span>March 29, 2026</span>
-    </a>
-    <div class="post-page__inline-actions">
-      <button type="button" class="post-liker">
-        <div class="post-liker__count">42</div>
-      </button>
-    </div>
-    <a class="post-page__stat post-page__stat--comments">
-      <span>15 <span class="post-page__stat-label">Comments</span></span>
-    </a>
+<!DOCTYPE html><html lang=en-US><head><meta charset=utf-8><meta content="IE=edge" http-equiv=X-UA-Compatible><meta content=unsafe-url name=referrer><link href=/images/favicons/favicon--16x16.png rel=icon type=image/png sizes=16x16><link href=/images/favicons/favicon--32x32.png rel=icon type=image/png sizes=32x32><link href=/images/favicons/favicon--192x192.png rel=icon type=image/png sizes=192x192><link href=/images/logos/apple-touch-icon.png rel=apple-touch-icon-precomposed><meta content=#1f364d name=theme-color><meta content=%7B%22environment%22%3A%22production%22%2C%22historySupportMiddleware%22%3Atrue%2C%22locationType%22%3A%22auto%22%2C%22modulePrefix%22%3A%22indie-hackers%22%2C%22rootURL%22%3A%22%2F%22%2C%22EmberENV%22%3A%7B%22FEATURES%22%3A%7B%7D%2C%22EXTEND_PROTOTYPES%22%3A%7B%22Date%22%3Afalse%7D%2C%22LOG_STACKTRACE_ON_DEPRECATION%22%3Afalse%2C%22_APPLICATION_TEMPLATE_WRAPPER%22%3Afalse%2C%22_DEFAULT_ASYNC_OBSERVERS%22%3Atrue%2C%22_JQUERY_INTEGRATION%22%3Atrue%2C%22_TEMPLATE_ONLY_GLIMMER_COMPONENTS%22%3Atrue%7D%2C%22APP%22%3A%7B%22name%22%3A%22indie-hackers%22%2C%22version%22%3A%220.0.0%2Bbfcb8f7e%22%7D%2C%22algolia%22%3A%7B%22applicationId%22%3A%22N86T1R3OWZ%22%2C%22scriptUrl%22%3A%22https%3A%2F%2Fcdn.jsdelivr.net%2Fnpm%2Fplaces.js%401.6.0%22%2C%22searchHelperUrl%22%3A%22https%3A%2F%2Fcdn.jsdelivr.net%2Fnpm%2Falgoliasearch-helper%402.21.2%2Fdist%2Falgoliasearch.helper.min.js%22%2C%22searchOnlyApiKey%22%3A%225140dac5e87f47346abbda1a34ee70c3%22%7D%2C%22amplitude%22%3A%7B%22projectId%22%3A%2278b8350dea58b176a6bc95ccdb8db850%22%7D%2C%22appCity%22%3A%7B%22apiKey%22%3A%22pk_073c491ba561562db9188305dd6a50a3faf5b0d8a9b3b7bd%22%2C%22projectId%22%3A%2279c34aab-4588-4420-bddd-9ae72588a4cc%22%7D%2C%22cloudFunctionUrls%22%3A%7B%22convertRtdbPostToFs%22%3A%22https%3A%2F%2Fus-central1-indie-hackers.cloudfunctions.net%2FconvertRtdbPostToFs%22%2C%22createIdeaPageDraft%22%3A%22https%3A%2F%2Fus-central1-indie-hackers.cloudfunctions.net%2FcreateIdeaPageDraft%22%2C%22createStripeCheckoutSession%22%3A%22https%3A%2F%2Fus-central1-indie-hackers.cloudfunctions.net%2FcreateStripeCheckoutSession%22%2C%22createStripePortalSession%22%3A%22https%3A%2F%2Fus-central1-indie-hackers.cloudfunctions.net%2FcreateStripePortalSession%22%2C%22ensureStripeCustomerExists%22%3A%22https%3A%2F%2Fus-central1-indie-hackers.cloudfunctions.net%2FensureStripeCustomerExists%22%2C%22generateTweetIdea%22%3A%22https%3A%2F%2Fus-central1-indie-hackers.cloudfunctions.net%2FgenerateTweetIdea%22%2C%22getHumanLoopChatResponse%22%3A%22https%3A%2F%2Fus-central1-indie-hackers.cloudfunctions.net%2FgetHumanLoopChatResponse%22%2C%22getGoogleCloudImages%22%3A%22https%3A%2F%2Fus-central1-indie-hackers.cloudfunctions.net%2FgetGoogleCloudImages%22%2C%22getTweetData%22%3A%22https%3A%2F%2Fus-central1-indie-hackers.cloudfunctions.net%2FgetTweetData%22%2C%22ingestContent%22%3A%22https%3A%2F%2Fus-central1-indie-hackers.cloudfunctions.net%2FingestContent%22%2C%22pingIdeaBoardAi%22%3A%22https%3A%2F%2Fus-central1-indie-hackers.cloudfunctions.net%2FpingIdeaBoardAi%22%2C%22promptIdeaReportAi%22%3A%22https%3A%2F%2Fus-central1-indie-hackers.cloudfunctions.net%2FpromptIdeaReportAi%22%2C%22runResearchAgent%22%3A%22https%3A%2F%2Fus-central1-indie-hackers.cloudfunctions.net%2FrunResearchAgent%22%2C%22scoreIdeaBoardCard%22%3A%22https%3A%2F%2Fus-central1-indie-hackers.cloudfunctions.net%2FscoreIdeaBoardCard%22%7D%2C%22convertKitForms%22%3A%7B%22growthBites%22%3A%7B%22actionUrl%22%3A%22https%3A%2F%2Fapp.convertkit.com%2Fforms%2F1075318%2Fsubscriptions%22%2C%22id%22%3A%221075318%22%2C%22tagId%22%3A%221150055%22%7D%2C%22newsletter%22%3A%7B%22actionUrl%22%3A%22https%3A%2F%2Fapp.convertkit.com%2Flanding_pages%2F191452%2Fsubscribe%22%2C%22id%22%3A%22191452%22%2C%22tagId%22%3A%22517095%22%7D%7D%2C%22cookies%22%3A%7B%22loggedIntoFirebase%22%3A%22logged_into_firebase%22%2C%22abTestingBucket%22%3A%22ih-ab-bucket%22%7D%2C%22directoryRoutes%22%3A%5B%22ai-coding-tools%22%2C%22ai-code-editors%22%2C%22tools%22%2C%22vibe-coding-tools%22%5D%2C%22errorMessages%22%3A%7B%22adapter%22%3A%7B%22multipleFound%22%3A%22Found%20multiple%20records%22%2C%22notFound%22%3A%22No%20record%20found%22%7D%2C%22linkNetworkError%22%3A%22Network%20error%20grabbing%20link%20data%22%2C%22ui%22%3A%7B%22pageTooHigh%22%3A%22Page%20number%20too%20high%22%7D%7D%2C%22fastboot%22%3A%7B%22hostWhitelist%22%3A%5B%22ihproduction.onrender.com%22%2C%22indiehackers.com%22%2C%22www.indiehackers.com%22%2C%22ihstaging-iy28.onrender.com%22%2C%22ihstaging.com%22%2C%22www.ihstaging.com%22%2C%7B%7D%2C%7B%7D%5D%2C%22redirectCode%22%3A301%2C%22shoeboxStoreKey%22%3A%22fastboot-store%22%7D%2C%22featurebase%22%3A%7B%22organization%22%3A%22indiehackers%22%2C%22sdkScriptUrl%22%3A%22https%3A%2F%2Fdo.featurebase.app%2Fjs%2Fsdk.js%22%7D%2C%22fingerprinting%22%3A%7B%22hash%22%3A%22bfcb8f7eaaad043b07a73cb9052700%22%2C%22enabled%22%3Atrue%7D%2C%22firebase%22%3A%7B%22apiKey%22%3A%22AIzaSyB6rUw_KY1UObdN61ni2YbdBG-M45nX7bQ%22%2C%22authDomain%22%3A%22indie-hackers.firebaseapp.com%22%2C%22authPopupPath%22%3A%22%2Ffirebase-auth%2Findex.html%22%2C%22cloudStoragePrefix%22%3A%22https%3A%2F%2Ffirebasestorage.googleapis.com%2Fv0%2Fb%2F%22%2C%22databaseURL%22%3A%22https%3A%2F%2Findie-hackers.firebaseio.com%22%2C%22defaultKeyLength%22%3A20%2C%22projectId%22%3A%22indie-hackers%22%2C%22storageBucket%22%3A%22indie-hackers.appspot.com%22%2C%22storageUrlPrefix%22%3A%22https%3A%2F%2Fstorage.googleapis.com%2F%22%7D%2C%22forum%22%3A%7B%22creationTimestamp%22%3A1469430000000%2C%22minPointsForBioLinks%22%3A50%2C%22minPointsForFollowedLinks%22%3A500%2C%22minPointsForLinkPosts%22%3A20%2C%22minPointsForDownvoting%22%3A20%2C%22partnershipGroupId%22%3A%22looking-to-partner-up%22%2C%22pageSizeList%22%3A20%2C%22pageSizeMobile%22%3A15%2C%22reservedLcUsernames%22%3A%5B%22about%22%2C%22admin%22%2C%22ads%22%2C%22advertise%22%2C%22advertising%22%2C%22all%22%2C%22ama%22%2C%22amas%22%2C%22award%22%2C%22awards%22%2C%22archive%22%2C%22archived%22%2C%22archives%22%2C%22article%22%2C%22articles%22%2C%22assets%22%2C%22best%22%2C%22blog%22%2C%22business%22%2C%22businesses%22%2C%22cast%22%2C%22casting%22%2C%22categories%22%2C%22category%22%2C%22channel%22%2C%22channels%22%2C%22chat%22%2C%22chats%22%2C%22college%22%2C%22comment%22%2C%22community%22%2C%22contact%22%2C%22content%22%2C%22contribute%22%2C%22courses%22%2C%22create%22%2C%22data%22%2C%22database%22%2C%22deal%22%2C%22deals%22%2C%22delete%22%2C%22deletedchannel%22%2C%22discount%22%2C%22discounts%22%2C%22edit%22%2C%22editing%22%2C%22editor%22%2C%22entrepreneurship%22%2C%22everyone%22%2C%22explore%22%2C%22faq%22%2C%22fonts%22%2C%22forum%22%2C%22forums%22%2C%22general%22%2C%22group%22%2C%22groups%22%2C%22growth%22%2C%22help%22%2C%22here%22%2C%22home%22%2C%22hub%22%2C%22ideas%22%2C%22images%22%2C%22interview%22%2C%22interviews%22%2C%22jobs%22%2C%22join%22%2C%22landing%22%2C%22landings%22%2C%22launch%22%2C%22launches%22%2C%22launching%22%2C%22learn%22%2C%22live%22%2C%22livestream%22%2C%22livestreaming%22%2C%22livestreams%22%2C%22manage%22%2C%22market%22%2C%22marketing%22%2C%22me%22%2C%22meetup%22%2C%22meetups%22%2C%22member%22%2C%22members%22%2C%22membership%22%2C%22milestone%22%2C%22milestones%22%2C%22miscellaneous%22%2C%22ms%22%2C%22newest%22%2C%22newsletter%22%2C%22newsletters%22%2C%22notification%22%2C%22notifications%22%2C%22officehours%22%2C%22pages%22%2C%22people%22%2C%22plus%22%2C%22podcast%22%2C%22podcasting%22%2C%22podcasts%22%2C%22premium%22%2C%22privacy%22%2C%22product%22%2C%22products%22%2C%22profile%22%2C%22profiles%22%2C%22project%22%2C%22projects%22%2C%22projects%22%2C%22redirect%22%2C%22review%22%2C%22reviews%22%2C%22round-table%22%2C%22round-tables%22%2C%22round-up%22%2C%22round-ups%22%2C%22roundtable%22%2C%22roundtables%22%2C%22roundup%22%2C%22roundups%22%2C%22school%22%2C%22scripts%22%2C%22search%22%2C%22seo%22%2C%22series%22%2C%22shareableimage%22%2C%22slack%22%2C%22slackbot%22%2C%22space%22%2C%22spaces%22%2C%22start%22%2C%22strategies%22%2C%22strategy%22%2C%22submit%22%2C%22subscribe%22%2C%22subscription%22%2C%22support%22%2C%22terms%22%2C%22thread%22%2C%22tactics%22%2C%22today%22%2C%22tools%22%2C%22topic%22%2C%22tribe%22%2C%22user%22%2C%22users%22%2C%22ycombinator%22%2C%22you%22%5D%2C%22welcomeIntroPostIdPrefix%22%3A%22welcomeIntro-%22%2C%22topFeedPeriodInMs%22%3A5400000%2C%22topFeedWeekendPeriodInMs%22%3A7200000%7D%2C%22globalFeed%22%3A%7B%22modelTypesEnum%22%3A%7B%22ARTICLE%22%3A%22article%22%2C%22COMMENT%22%3A%22comment%22%2C%22INTERVIEW%22%3A%22interview%22%2C%22NEW_COMMENT%22%3A%22new-comment%22%2C%22NEW_POST%22%3A%22new-post%22%2C%22PODCAST%22%3A%22podcast%22%2C%22POST%22%3A%22post%22%2C%22PRODUCT_UPDATE%22%3A%22productUpdate%22%2C%22PRODUCT%22%3A%22product%22%2C%22THREAD%22%3A%22thread%22%7D%7D%2C%22google%22%3A%7B%22clientId%22%3A%22831124528331-j8tlal1oeeok6rmiopg46nalmd3lu5j0.apps.googleusercontent.com%22%2C%22oAuthUrl%22%3A%22https%3A%2F%2Faccounts.google.com%2Fo%2Foauth2%2Fv2%2Fauth%22%7D%2C%22googleAnalytics%22%3A%7B%22enabled%22%3Atrue%2C%22id%22%3A%22UA-81418423-2%22%2C%22redirectUri%22%3A%22https%3A%2F%2Fwww.indiehackers.com%2Fredirect%2Fgoogle-analytics%22%2C%22scope%22%3A%22https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fanalytics.readonly%22%7D%2C%22ideaBoard%22%3A%7B%22creditPacks%22%3A%7B%22SMALL%22%3A%7B%22name%22%3A%22Small%22%2C%22numCredits%22%3A75%2C%22price%22%3A16%2C%22priceId%22%3A%22price_1Qn7ITA3WLAtCiTakrqdXjjD%22%2C%22priceStr%22%3A%2216.00%22%2C%22priceStrWithDollarSign%22%3A%22%2416.00%22%2C%22stripeProductId%22%3A%22prod_RgUH2Czx0XRqhA%22%7D%2C%22MEDIUM%22%3A%7B%22name%22%3A%22Medium%22%2C%22numCredits%22%3A225%2C%22price%22%3A39%2C%22priceId%22%3A%22price_1Qn7JYA3WLAtCiTavo2RjPgH%22%2C%22priceStr%22%3A%2239.00%22%2C%22priceStrWithDollarSign%22%3A%22%2439.00%22%2C%22stripeProductId%22%3A%22prod_RgUIVno2f73z7y%22%7D%2C%22LARGE%22%3A%7B%22name%22%3A%22Large%22%2C%22numCredits%22%3A600%2C%22price%22%3A78%2C%22priceId%22%3A%22price_1Qn7JZA3WLAtCiTaVz7sHytP%22%2C%22priceStr%22%3A%2278.00%22%2C%22priceStrWithDollarSign%22%3A%22%2478.00%22%2C%22stripeProductId%22%3A%22prod_RgUIU5a3cKUKXB%22%7D%2C%22XLARGE%22%3A%7B%22name%22%3A%22Extra%20Large%22%2C%22numCredits%22%3A1500%2C%22price%22%3A162%2C%22priceId%22%3A%22price_1Qn7JbA3WLAtCiTaILtI21gP%22%2C%22priceStr%22%3A%22162.00%22%2C%22priceStrWithDollarSign%22%3A%22%24162.00%22%2C%22stripeProductId%22%3A%22prod_RgUINwDbQK1bU2%22%7D%7D%2C%22numStartingCreditsPerBoard%22%3A18%7D%2C%22ihPlus%22%3A%7B%22numFreeCredits%22%3A225%2C%22pctDiscountOnCredits%22%3A0.15%2C%22prices%22%3A%7B%22MONTHLY%22%3A%7B%22monthlyAmountStr%22%3A%2224.75%22%2C%22prefixedMonthlyAmountStr%22%3A%22%2424.75%22%2C%22annualAmountStr%22%3A%22297%22%2C%22prefixedAnnualAmountStr%22%3A%22%24297%22%2C%22priceKey%22%3A%22PLUS_MONTHLY%22%7D%2C%22YEARLY%22%3A%7B%22monthlyAmountStr%22%3A%2216.50%22%2C%22prefixedMonthlyAmountStr%22%3A%22%2416.50%22%2C%22annualAmountStr%22%3A%22198%22%2C%22prefixedAnnualAmountStr%22%3A%22%24198%22%2C%22priceKey%22%3A%22PLUS_YEARLY%22%7D%7D%2C%22freeContentViewingLimits%22%3A%7B%22ideaReports%22%3A2%2C%22posts%22%3A5%7D%7D%2C%22imgix%22%3A%7B%22origin%22%3A%22https%3A%2F%2Fimages.indiehackers.com%22%7D%2C%22lambda%22%3A%7B%22connectToGoogleAnalyticsUrl%22%3A%22https%3A%2F%2Fonr7jogg43.execute-api.us-east-1.amazonaws.com%2Fv1%22%2C%22connectToStripeUrl%22%3A%22https%3A%2F%2Fonr7jogg43.execute-api.us-east-1.amazonaws.com%2Fv1%22%2C%22deleteGoogleAnalyticsDataUrl%22%3A%22https%3A%2F%2Fonr7jogg43.execute-api.us-east-1.amazonaws.com%2Fv1%22%2C%22deleteStripeDataUrl%22%3A%22https%3A%2F%2Fonr7jogg43.execute-api.us-east-1.amazonaws.com%2Fv1%22%2C%22loadInitialGoogleAnalyticsDataUrl%22%3A%22https%3A%2F%2Fonr7jogg43.execute-api.us-east-1.amazonaws.com%2Fv1%22%7D%2C%22libraries%22%3A%7B%22pikadayJs%22%3A%22https%3A%2F%2Fcdnjs.cloudflare.com%2Fajax%2Flibs%2Fpikaday%2F1.6.1%2Fpikaday.js%22%7D%2C%22localStorage%22%3A%7B%22keyPrefix%22%3A%22indieHackers%22%7D%2C%22mapbox%22%3A%7B%22accessToken%22%3A%22pk.eyJ1IjoiaW5kaWVoYWNrZXJzIiwiYSI6ImNqZzQ0YjBodjV3N3IzMm1kOWFyZmZveGQifQ.AqgqZOJoLzAg1KJ8ablKFg%22%2C%22clientScriptUrl%22%3A%22https%3A%2F%2Fapi.mapbox.com%2Fmapbox-gl-js%2Fv0.44.2%2Fmapbox-gl.js%22%2C%22sdkScriptUrl%22%3A%22https%3A%2F%2Funpkg.com%2Fmapbox%401.0.0-beta10%2Fdist%2Fmapbox-sdk.min.js%22%2C%22styles%22%3A%7B%22background%22%3A%22mapbox%3A%2F%2Fstyles%2Findiehackers%2Fcjg4cjf5l0dem2ro2atgpas7k%22%7D%2C%22stylesheetUrl%22%3A%22https%3A%2F%2Fapi.mapbox.com%2Fmapbox-gl-js%2Fv0.44.2%2Fmapbox-gl.css%22%7D%2C%22oneTrustCookieBanner%22%3A%7B%22enabled%22%3Atrue%7D%2C%22pageTitle%22%3A%7B%22prepend%22%3Atrue%2C%22separator%22%3A%22%20-%20%22%7D%2C%22pillarPageRoutes%22%3A%5B%22vibe-coding%22%5D%2C%22portals%22%3A%7B%22numPostsPerPage%22%3A20%7D%2C%22post%22%3A%7B%22paywallClass%22%3A%22pwcontent%22%7D%2C%22prodUrl%22%3A%7B%22host%22%3A%22www.indiehackers.com%22%2C%22origin%22%3A%22https%3A%2F%2Fwww.indiehackers.com%22%7D%2C%22products%22%3A%7B%22numHitsPerPage%22%3A18%7D%2C%22sortable%22%3A%7B%22scriptUrl%22%3A%22https%3A%2F%2Fcdn.jsdelivr.net%2Fnpm%2Fsortablejs%40latest%2FSortable.min.js%22%7D%2C%22stripe%22%3A%7B%22clientId%22%3A%22ca_Bmxr1vJEq4wWumKCUNlYPfL14AaG7zib%22%2C%22redirectUri%22%3A%22https%3A%2F%2Fwww.indiehackers.com%2Fredirect%2Fstripe%22%7D%2C%22topFeed%22%3A%7B%22sortOrderScoreDigits%22%3A15%2C%22sortingCutoffInHours%22%3A36%7D%2C%22twitter%22%3A%7B%22widgetJsUrl%22%3A%22https%3A%2F%2Fplatform.twitter.com%2Fwidgets.js%22%7D%2C%22users%22%3A%7B%22deletedUserUid%22%3A%22F8lJcs1lPcObRsiOQAT2uwl821l1%22%2C%22deletedUserUsername%22%3A%22DeletedUser%22%7D%2C%22validation%22%3A%7B%22article%22%3A%7B%22maxTitleLength%22%3A100%2C%22minTitleLength%22%3A4%7D%2C%22comment%22%3A%7B%22maxLength%22%3A12000%2C%22minLength%22%3A1%2C%22msForDeletion%22%3A31536000000%2C%22msForEditing%22%3A31536000000%7D%2C%22contentPiece%22%3A%7B%22maxDescriptionLength%22%3A250%2C%22maxImageBytes%22%3A2000000%2C%22maxTitleLength%22%3A100%7D%2C%22group%22%3A%7B%22maxAboutLength%22%3A250%2C%22maxDescriptionLength%22%3A75%2C%22maxGuidelineLength%22%3A80%2C%22maxResourceDescriptionLength%22%3A80%2C%22maxResourceTitleLength%22%3A65%2C%22maxResourceUrlLength%22%3A2000%2C%22maxNameLength%22%3A25%2C%22minDescriptionLength%22%3A6%2C%22minNameLength%22%3A3%7D%2C%22hexIdLength%22%3A10%2C%22idea%22%3A%7B%22maxCompanyNameLength%22%3A60%2C%22maxCustomerCardContentLength%22%3A250%2C%22maxCustomerCardLabelLength%22%3A40%2C%22maxCustomerCardTitleLength%22%3A40%2C%22maxCustomerDescriptionLength%22%3A80%2C%22maxCustomerNameLength%22%3A40%2C%22maxCustomerTagLength%22%3A20%2C%22maxDescriptionLength%22%3A325%2C%22maxGlanceFacts%22%3A8%2C%22maxGlanceLabelLength%22%3A30%2C%22maxGlanceNoteLength%22%3A2000%2C%22maxGlanceTextLength%22%3A30%2C%22maxGlanceUrlLength%22%3A2000%2C%22maxSectionBodyLength%22%3A20000%2C%22maxSectionColorLength%22%3A30%2C%22maxSectionSvgPathLength%22%3A2000%2C%22maxSectionTitleLength%22%3A100%2C%22maxTitleLength%22%3A100%7D%2C%22interview%22%3A%7B%22maxTitleLength%22%3A70%7D%2C%22jobAd%22%3A%7B%22maxApplyUrlLength%22%3A2083%2C%22maxLocationTimeZoneLength%22%3A200%2C%22maxRoleLength%22%3A50%2C%22maxTagLength%22%3A50%7D%2C%22meetup%22%3A%7B%22maxAnswerLength%22%3A3000%2C%22minAnswerLength%22%3A10%2C%22maxBriefDescriptionLength%22%3A100%2C%22minBriefDescriptionLength%22%3A10%2C%22maxFullDescriptionLength%22%3A3000%2C%22minFullDescriptionLength%22%3A10%2C%22maxImageUrlLength%22%3A2083%2C%22maxLinkUrlLength%22%3A2083%2C%22maxLocationAddressLength%22%3A600%2C%22maxLocationCityLength%22%3A200%2C%22maxLocationCountryLength%22%3A200%2C%22maxLocationNameLength%22%3A300%2C%22maxLocationRegionLength%22%3A200%2C%22maxNameLength%22%3A60%2C%22minNameLength%22%3A10%7D%2C%22post%22%3A%7B%22maxBodyLength%22%3A100000%2C%22maxDescriptionLength%22%3A155%2C%22maxImageSizeInBytes%22%3A5000000%2C%22maxLinkUrlLength%22%3A2083%2C%22maxNumImages%22%3A5%2C%22maxTitleLength%22%3A140%7D%2C%22product%22%3A%7B%22maxAvatarUrlLength%22%3A2000%2C%22maxDescriptionLength%22%3A220%2C%22maxFacebookUrlLength%22%3A120%2C%22maxIdLength%22%3A100%2C%22maxNameLength%22%3A50%2C%22maxRoleLength%22%3A100%2C%22maxTaglineLength%22%3A60%2C%22maxTwitterHandleLength%22%3A20%2C%22maxWebsiteUrlLength%22%3A500%2C%22minIdLength%22%3A2%7D%2C%22productUpdate%22%3A%7B%22maxIconUrlLength%22%3A2000%2C%22maxDescriptionLength%22%3A6000%2C%22minDescriptionLength%22%3A250%2C%22maxLinkDescriptionLength%22%3A1000%2C%22maxLinkImageUrlLength%22%3A2000%2C%22maxLinkTitleLength%22%3A255%2C%22maxLinkUrlLength%22%3A2000%2C%22maxTitleLength%22%3A140%7D%2C%22series%22%3A%7B%22minNameLength%22%3A4%2C%22maxNameLength%22%3A60%2C%22minDescriptionLength%22%3A4%2C%22maxDescriptionLength%22%3A255%2C%22minSlugLength%22%3A4%2C%22maxSlugLength%22%3A60%2C%22maxJoinReasonLength%22%3A100%7D%2C%22spotlight%22%3A%7B%22defaultSummaryLength%22%3A160%2C%22maxSummaryLength%22%3A200%7D%2C%22tag%22%3A%7B%22maxNameLength%22%3A20%7D%2C%22thread%22%3A%7B%22maxLinkDescriptionLength%22%3A1000%2C%22maxLinkImageUrlLength%22%3A2000%2C%22maxLinkTitleLength%22%3A255%2C%22maxLinkUrlLength%22%3A2000%2C%22msForDeletion%22%3A31536000000%7D%2C%22topProductsEntry%22%3A%7B%22maxNameLength%22%3A80%2C%22maxTaglineLength%22%3A80%2C%22maxWebsiteUrlLength%22%3A2000%7D%2C%22user%22%3A%7B%22maxBioLength%22%3A4000%2C%22maxEmailLength%22%3A256%2C%22minEmailLength%22%3A5%2C%22maxFullNameLength%22%3A60%2C%22maxPasswordLength%22%3A128%2C%22minPasswordLength%22%3A7%2C%22maxPublicEmailLength%22%3A256%2C%22maxTwitterHandleLength%22%3A20%2C%22maxUsernameLength%22%3A20%2C%22minUsernameLength%22%3A2%2C%22minUsernameChangeDays%22%3A90%7D%2C%22userProfile%22%3A%7B%22articles%22%3A%7B%22maxBlockTitleLength%22%3A150%2C%22maxBlockDescriptionLength%22%3A600%2C%22maxTitleLength%22%3A300%2C%22maxUrlLength%22%3A2000%7D%2C%22bio%22%3A%7B%22maxDescriptionLength%22%3A600%2C%22maxIconItemLabelLength%22%3A30%2C%22maxIconItemUrlLength%22%3A2000%2C%22maxImageUrlLength%22%3A2000%2C%22maxNameLength%22%3A60%2C%22minNameLength%22%3A1%7D%2C%22products%22%3A%7B%22maxDescriptionLength%22%3A600%2C%22maxLogoUrlLength%22%3A2000%2C%22maxNameLength%22%3A150%2C%22minNameLength%22%3A1%2C%22maxRevenueLength%22%3A60%2C%22maxStatusLength%22%3A60%2C%22maxBlockTitleLength%22%3A150%2C%22maxBlockDescriptionLength%22%3A600%2C%22maxUrlLength%22%3A2000%7D%2C%22socials%22%3A%7B%22maxHandleLength%22%3A100%2C%22maxBlockTitleLength%22%3A150%2C%22maxBlockDescriptionLength%22%3A600%2C%22maxNameLength%22%3A150%2C%22maxUrlLength%22%3A2000%7D%7D%7D%2C%22webhookUrls%22%3A%7B%22reportError%22%3A%22https%3A%2F%2Fus-central1-indie-hackers.cloudfunctions.net%2FreportError%22%7D%2C%22youTube%22%3A%7B%22liveStreamingUrl%22%3A%22https%3A%2F%2Fwww.youtube-nocookie.com%2Fembed%2Flive_stream%3Fchannel%3DUC36zt_eM_gZQXayw_pAdASg%22%7D%2C%22zapier%22%3A%7B%22arbitraryEmailWebhookUrl%22%3A%22https%3A%2F%2Fhooks.zapier.com%2Fhooks%2Fcatch%2F1773705%2Ff4f3me%22%7D%2C%22url%22%3A%7B%22host%22%3A%22www.indiehackers.com%22%2C%22origin%22%3A%22https%3A%2F%2Fwww.indiehackers.com%22%7D%2C%22exportApplicationGlobal%22%3Afalse%7D name=indie-hackers/config/environment>  <meta name="ember-cli-head-start" content>
+<!---->
+<!---->
+  <meta name="description" content="Here are a few tips, in no particular order: • **Treat your posts like writing copy** for your landing pages, cold emails, etc. The same rules apply! Un...">
 
-    <ol class="comment-tree comment-tree--level-1">
-      <li>
-        <div class="comment">
-          <div class="comment__main">
-            <div class="comment__content content">
-              <p>First comment</p>
+  <link rel="canonical" href="https://www.indiehackers.com/post/how-do-you-make-a-successful-post-on-indie-hackers-f6745260fd">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<!---->
+
+  <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.indiehackers.com/post/how-do-you-make-a-successful-post-on-indie-hackers-f6745260fd"
+  },
+  "headline": "How do you make a successful post on Indie Hackers?",
+  "image": [],
+  "datePublished": "2019-06-18T18:59:09.726Z",
+  "dateModified": "2020-02-19T03:47:54.648Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Courtland Allen",
+      "sameAs": [
+        "https://www.indiehackers.com/csallen",
+        "https://x.com/csallen"
+      ]
+    }
+  ]
+}
+  </script>
+
+
+  <meta property="fb:app_id" content="1128541620537360">
+  <meta property="og:description" content="Here are a few tips, in no particular order: • **Treat your posts like writing copy** for your landing pages, cold emails, etc. The same rules apply! Un...">
+  <meta property="og:image" content="https://storage.googleapis.com/indie-hackers.appspot.com/shareable-images/posts/f6745260fd">
+
+    <meta property="og:image:height" content="840">
+
+    <meta property="og:image:width" content="1680">
+  <meta property="og:site_name" content="Indie Hackers">
+  <meta property="og:title" content="How do you make a successful post on Indie Hackers?">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.indiehackers.com/post/how-do-you-make-a-successful-post-on-indie-hackers-f6745260fd">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:description" content="Here are a few tips, in no particular order: • **Treat your posts like writing copy** for your landing pages, cold emails, etc. The same rules apply! Un...">
+  <meta name="twitter:image" content="https://storage.googleapis.com/indie-hackers.appspot.com/shareable-images/posts/f6745260fd">
+  <meta name="twitter:site" content="@IndieHackers">
+  <meta name="twitter:title" content="How do you make a successful post on Indie Hackers?">
+
+<!---->
+<!----><meta name="ember-cli-head-end" content>
+<title>How do you make a successful post on Indie Hackers? - Indie Hackers</title><script src="https://www.googletagmanager.com/gtag/js?id=G-W1TFN9RN75" async></script><script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-W1TFN9RN75")</script><script>!function(t){function n(){}n.prototype.add=function(){return this},n.prototype.append=function(){return this},n.prototype.set=function(){return this},n.prototype.setOnce=function(){return this};var i={init:function(){},logEvent:function(){},identify:function(){},setUserId:function(){}};t.amplitude={Identify:n,getInstance:function(){return i}}}(window)</script><script>window.ih_bc=function(){const c=window.location;let e=c.search||"";-1===e.indexOf("nocache=")&&(e=e?e+"&nocache="+ +new Date:"?nocache="+ +new Date,location=c.origin+c.pathname+e)},window.ih_cqp=function(){const c=window.location,e=window.history;let n=c.search||"";const a=n.match(/nocache=[^&]+&?/);if(a&&e&&e.replaceState){n=n.replace(a,"").replace(/^\?$/,"").replace(/&$/,"");const o=c.origin+c.pathname+n;e.replaceState({path:o},"",o)}}</script><script src=https://cdn.jsdelivr.net/npm/@app-city/analytics-browser@0.5.0/dist/app-city-analytics.min.js async></script><link href="/assets/post-bfcb8f7eaaad043b07a73cb9052700.css" rel=stylesheet integrity="" onerror=window.ih_bc()></head><body  class="no-quote"><script type="x/boundary" id="fastboot-body-start"></script>
+
+
+<div class="ember-view" data-route="post">
+  <!---->
+
+    
+<header class="site-header">
+
+
+  <div class="site-header__primary-row
+              
+              ">
+     
+
+    <div class="site-header__left">
+
+      <div class="site-header__menu ">
+        <button aria-label="Open Menu" class="site-header__menu-toggle">
+          <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" id="ember113844" class="ember-view site-header__menu-icon site-header__menu-icon--open">  <path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z">
+<!---->  </path>
+</svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" id="ember113845" class="ember-view site-header__menu-icon site-header__menu-icon--close">  <path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z">
+<!---->  </path>
+</svg>
+        </button>
+
+        <nav class="site-header__menu-dropdown">
+          <a href="/" id="ember113846" class="ember-view menu-dropdown__nav-link
+                     menu-dropdown__nav-link--major
+                     menu-dropdown__nav-link--active">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" id="ember113847" class="ember-view menu-dropdown__nav-icon">  <path d="M12 6.453l9 8.375v9.172h-6v-6h-6v6h-6v-9.172l9-8.375zm12 5.695l-12-11.148-12 11.133 1.361 1.465 10.639-9.868 10.639 9.883 1.361-1.465z">
+<!---->  </path>
+</svg>
+            <label>Home</label>
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" id="ember113848" class="ember-view menu-dropdown__arrow-icon">  <path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z">
+<!---->  </path>
+</svg>
+          </a>
+          <a href="/starting-up" id="ember113849" class="ember-view menu-dropdown__nav-link
+                     menu-dropdown__nav-link--major
+                     ">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" id="ember113850" class="ember-view menu-dropdown__nav-icon">  <path d="M8.566 17.842c-.945 2.462-3.678 4.012-6.563 4.161.139-2.772 1.684-5.608 4.209-6.563l.51.521c-1.534 1.523-2.061 2.765-2.144 3.461.704-.085 2.006-.608 3.483-2.096l.505.516zm-1.136-11.342c-1.778-.01-4.062.911-5.766 2.614-.65.649-1.222 1.408-1.664 2.258 1.538-1.163 3.228-1.485 5.147-.408.566-1.494 1.32-3.014 2.283-4.464zm5.204 17.5c.852-.44 1.61-1.013 2.261-1.664 1.708-1.706 2.622-4.001 2.604-5.782-1.575 1.03-3.125 1.772-4.466 2.296 1.077 1.92.764 3.614-.399 5.15zm11.312-23.956c-.428-.03-.848-.044-1.261-.044-9.338 0-14.465 7.426-16.101 13.009l4.428 4.428c5.78-1.855 12.988-6.777 12.988-15.993v-.059c-.002-.437-.019-.884-.054-1.341zm-5.946 7.956c-1.105 0-2-.895-2-2s.895-2 2-2 2 .895 2 2-.895 2-2 2z">
+<!---->  </path>
+</svg>
+            <label>Starting Up</label>
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" id="ember113851" class="ember-view menu-dropdown__arrow-icon">  <path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z">
+<!---->  </path>
+</svg>
+          </a>
+          <a href="/stories" id="ember113852" class="ember-view menu-dropdown__nav-link
+                     menu-dropdown__nav-link--major
+                     ">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" id="ember113853" class="ember-view menu-dropdown__nav-icon">  <path d="M22 24h-17c-1.657 0-3-1.343-3-3v-18c0-1.657 1.343-3 3-3h17v24zm-2-4h-14.505c-1.375 0-1.375 2 0 2h14.505v-2zm-3-15h-10v3h10v-3z">
+<!---->  </path>
+</svg>
+            <label>Case Studies DB</label>
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" id="ember113854" class="ember-view menu-dropdown__arrow-icon">  <path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z">
+<!---->  </path>
+</svg>
+          </a>
+          <a href="/products" id="ember113855" class="ember-view menu-dropdown__nav-link
+                     menu-dropdown__nav-link--major
+                     ">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" id="ember113856" class="ember-view menu-dropdown__nav-icon">  <path d="M11.499 12.03v11.971l-10.5-5.603v-11.835l10.5 5.467zm11.501 6.368l-10.501 5.602v-11.968l10.501-5.404v11.77zm-16.889-15.186l10.609 5.524-4.719 2.428-10.473-5.453 4.583-2.499zm16.362 2.563l-4.664 2.4-10.641-5.54 4.831-2.635 10.474 5.775z">
+<!---->  </path>
+</svg>
+            <label>Products</label>
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" id="ember113857" class="ember-view menu-dropdown__arrow-icon">  <path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z">
+<!---->  </path>
+</svg>
+          </a>
+          <a href="/ideas" id="ember113858" class="ember-view menu-dropdown__nav-link
+                     menu-dropdown__nav-link--major
+                     ">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" id="ember113859" class="ember-view menu-dropdown__nav-icon">  <path d="M14.25 23l-1.188.782c-.154.139-.38.218-.615.218h-.894c-.235 0-.461-.079-.616-.218l-1.187-.782h4.5zm.042-2c.276 0 .5.224.5.5 0 .277-.224.5-.5.5h-4.558c-.276 0-.5-.223-.5-.5 0-.276.224-.5.5-.5h4.558zm.494-1h-5.572c0-3.949-3.214-5.659-3.214-9.228 0-3.723 2.998-5.772 5.997-5.772 3.001 0 6.003 2.052 6.003 5.772 0 3.569-3.214 5.224-3.214 9.228m4.953-7.229l2.699 1.224-.827 1.822-2.596-1.177c.301-.6.55-1.215.724-1.869m-15.477 0c.173.664.415 1.261.719 1.87l-2.592 1.176-.827-1.822 2.7-1.224zm15.55-3.771h3.188v2h-3.003c.021-.67-.04-1.345-.185-2m-15.625 0c-.143.654-.203 1.326-.184 1.995v.005h-3.003v-2h3.187zm13.856-3.428l2.485-1.763 1.158 1.631-2.505 1.777c-.292-.582-.67-1.132-1.138-1.645m-12.087-.001c-.46.503-.837 1.05-1.138 1.645l-2.503-1.776 1.157-1.631 2.484 1.762zm8.869-2.092l1.327-2.69 1.793.885-1.327 2.69c-.557-.367-1.161-.664-1.793-.885m-5.651-.002c-.631.22-1.236.516-1.794.884l-1.326-2.687 1.794-.885 1.326 2.688zm3.826-.416c-.668-.078-1.309-.082-2-.003v-3.058h2v3.061z">
+<!---->  </path>
+</svg>
+            <label>Ideas DB</label>
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" id="ember113860" class="ember-view menu-dropdown__arrow-icon">  <path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z">
+<!---->  </path>
+</svg>
+          </a>
+          <a href="/vibe-coding-tools" id="ember113861" class="ember-view menu-dropdown__nav-link
+                     menu-dropdown__nav-link--major
+                     ">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" id="ember113862" class="ember-view menu-dropdown__nav-icon">  <path d="M0 9v14h24v-14h-24zm16 3h2v2h-2v-2zm-3 0h2v2h-2v-2zm3 3v2h-2v-2h2zm-6-3h2v2h-2v-2zm3 3v2h-2v-2h2zm-6-3h2v2h-2v-2zm3 3v2h-2v-2h2zm-7-3h3v2h-3v-2zm0 3h4v2h-4v-2zm14 5h-10v-2h10v2zm4-3h-4v-2h4v2zm0-3h-2v-2h2v2zm-9.358-8.812c-1.036-.043-2.293-.086-3.049-1.027-.393-.489-.594-1.136-.594-1.847 0-.422.071-.867.217-1.314l1.206.363c-.205.634-.269 1.506.172 2.054.45.56 1.392.512 2.376.584 2.134.155 3.03 1.423 3.03 2.678 0 .461-.121.92-.345 1.321h-1.569c1.016-.804 1.06-2.706-1.444-2.812z">
+<!---->  </path>
+</svg>
+            <label>Vibe Coding Tools</label>
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" id="ember113863" class="ember-view menu-dropdown__arrow-icon">  <path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z">
+<!---->  </path>
+</svg>
+          </a>
+            <a href="/plus" id="ember113864" class="ember-view menu-dropdown__nav-link
+                       menu-dropdown__nav-link--major
+                       ">
+              <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" id="ember113865" class="ember-view menu-dropdown__nav-icon">  <path d="M11 6.999c2.395.731 4.27 2.607 4.999 5.001.733-2.395 2.608-4.269 5.001-5-2.393-.731-4.268-2.605-5.001-5-.729 2.394-2.604 4.268-4.999 4.999zm7 7c1.437.438 2.562 1.564 2.999 3.001.44-1.437 1.565-2.562 3.001-3-1.436-.439-2.561-1.563-3.001-3-.437 1.436-1.562 2.561-2.999 2.999zm-6 5.501c1.198.365 2.135 1.303 2.499 2.5.366-1.198 1.304-2.135 2.501-2.5-1.197-.366-2.134-1.302-2.501-2.5-.364 1.197-1.301 2.134-2.499 2.5zm-6-8.272c.522.658 1.118 1.253 1.775 1.775-.657.522-1.252 1.117-1.773 1.774-.522-.658-1.118-1.253-1.776-1.776.658-.521 1.252-1.116 1.774-1.773zm-.001-4.228c-.875 2.873-3.128 5.125-5.999 6.001 2.876.88 5.124 3.128 6.004 6.004.875-2.874 3.128-5.124 5.996-6.004-2.868-.874-5.121-3.127-6.001-6.001z">
+<!---->  </path>
+</svg>
+              <label>Subscribe to IH+</label>
+              <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" id="ember113866" class="ember-view menu-dropdown__arrow-icon">  <path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z">
+<!---->  </path>
+</svg>
+            </a>
+        </nav>
+      </div>
+
+
+        <a href="/plus" id="ember113867" class="ember-view site-header__plus-link
+                   ">
+          <svg class="ih-plus-type" viewbox="0 0 148 46" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="10" height="46" fill="#01d40b"></rect>
+  <rect x="10" y="0" width="14" height="10" fill="#83da87"></rect>
+  <rect x="24" y="0" width="10" height="10" fill="#00b308"></rect>
+  <rect x="10" y="24" width="14" height="10" fill="#83da87"></rect>
+  <rect x="24" y="10" width="10" height="14" fill="#01d40b"></rect>
+  <rect x="24" y="24" width="10" height="10" fill="#00b308"></rect>
+  <rect x="40" y="0" width="10" height="46" fill="#01d40b"></rect>
+  <rect x="50" y="36" width="18" height="10" fill="#83da87"></rect>
+  <rect x="74" y="0" width="10" height="46" fill="#01d40b"></rect>
+  <rect x="84" y="36" width="24" height="10" fill="#83da87"></rect>
+  <rect x="98" y="0" width="10" height="36" fill="#01d40b"></rect>
+  <rect x="114" y="0" width="10" height="10" fill="#00b308"></rect>
+  <rect x="124" y="0" width="24" height="10" fill="#01d40b"></rect>
+  <rect x="114" y="10" width="10" height="18" fill="#01d40b"></rect>
+  <rect x="124" y="18" width="14" height="10" fill="#83da87"></rect>
+  <rect x="138" y="18" width="10" height="28" fill="#00b308"></rect>
+  <rect x="114" y="36" width="24" height="10" fill="#01d40b"></rect>
+</svg>
+
+        </a>
+
+    </div>
+
+     
+
+    <nav class="site-header__nav site-header__nav--admin">
+      <a href="/starting-up" id="ember113868" class="ember-view site-header__nav-link
+                 site-header__nav-link--start
+                 ">
+        Starting Up
+      </a>
+      <a href="/stories" id="ember113869" class="ember-view site-header__nav-link
+                 site-header__nav-link--stories
+                 ">
+        Case Studies
+      </a>
+      <a href="/" id="ember113870" class="ember-view site-header__nav-link
+                 site-header__nav-link--logo
+                 site-header__nav-link--active" aria-label="Community Home">
+        <div class="ih-logo">
+  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" alt="Indie Hackers logo glyph">
+    <path d="M0 0 H24 V24 H0 V6.8 H5.4 V17.2 H7.8 V6.8 H10.2 V17.2 H12.6 V13.2 H16.2 V17.2 H18.6 V6.8 H16.2 V10.9 H12.6 V6.8 H0z"></path>
+  </svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1268.2 128.4" alt="Indie Hackers logotype">
+    <path d="M0,126.2V2.3h27.9v123.9H0z"></path>
+    <path d="M57.2,126.2V2.3h28.7l32.3,61.6l12.2,27.4h0.8c-0.6-6.6-1.4-13.9-2.2-22c-0.8-8.1-1.2-15.8-1.2-23.2V2.3h26.6v123.9h-28.7 L93.3,64.4l-12.2-27h-0.8c0.6,6.8,1.4,14.2,2.2,22c0.8,7.9,1.2,15.5,1.2,22.8v43.9H57.2z"></path>
+    <path d="M183.5,126.2V2.3h35c9.5,0,18.1,1.2,25.7,3.6c7.6,2.4,14.1,6.1,19.6,11.1c5.4,5,9.6,11.4,12.5,19.1 c2.9,7.7,4.4,16.9,4.4,27.6c0,10.6-1.5,19.9-4.4,27.7c-2.9,7.9-7,14.3-12.3,19.5s-11.7,9-19.1,11.5c-7.4,2.5-15.7,3.8-24.8,3.8 H183.5z M211.5,103.5h5.3c5.3,0,10.1-0.7,14.4-2.1c4.3-1.4,8-3.6,11-6.7c3-3.1,5.4-7.2,7.1-12.3c1.7-5.1,2.6-11.3,2.6-18.8 c0-7.3-0.9-13.5-2.6-18.5c-1.7-5-4.1-9-7.1-12c-3-3-6.7-5.1-11-6.4c-4.3-1.3-9.1-1.9-14.4-1.9h-5.3V103.5z"></path>
+    <path d="M304.2,126.2V2.3h27.9v123.9H304.2z"></path>
+    <path d="M361.4,126.2V2.3h77.5v23.6h-49.6v24.9h42.2v23.4h-42.2v28.5h51.5v23.6H361.4z"></path>
+    <path d="M503.5,126.2V2.3h27.9V50h42.8V2.3h28.1v123.9h-28.1V74.5h-42.8v51.7H503.5z"></path>
+    <path d="M615.8,126.2L654.5,2.3h33.6l38.8,123.9h-29.6l-7.6-29.5h-37.8l-7.6,29.5H615.8z M660.6,63.5l-3,11.4H684l-2.9-11.4 c-1.8-6.2-3.5-12.8-5.1-19.8c-1.6-7-3.3-13.7-4.9-20.1h-0.8c-1.5,6.6-3.1,13.3-4.7,20.2C664.1,50.7,662.4,57.3,660.6,63.5z"></path>
+    <path d="M790.2,128.4c-7.9,0-15.3-1.4-22.2-4.1c-7-2.7-13.1-6.7-18.3-12.1c-5.3-5.3-9.4-11.9-12.4-19.9c-3-7.9-4.6-17.1-4.6-27.5 c0-10.3,1.6-19.4,4.8-27.5c3.2-8,7.4-14.9,12.7-20.4c5.3-5.6,11.5-9.8,18.6-12.7c7.1-2.9,14.6-4.4,22.4-4.4c8,0,15.1,1.6,21.5,4.8 c6.3,3.2,11.6,7,15.8,11.3L813.6,34c-3.2-2.9-6.5-5.3-10-7.1c-3.5-1.8-7.4-2.8-11.9-2.8c-4.2,0-8.1,0.9-11.9,2.8 c-3.7,1.8-7,4.5-9.7,7.9c-2.7,3.4-4.9,7.6-6.5,12.5c-1.6,4.9-2.4,10.5-2.4,16.7c0,12.8,2.7,22.7,8.2,29.7 c5.4,7,12.7,10.5,21.9,10.5c5.1,0,9.6-1.1,13.6-3.3c4-2.2,7.5-5,10.5-8.3l14.8,17.5C819.9,122.4,806.5,128.4,790.2,128.4z"></path>
+    <path d="M849.1,126.2V2.3H877V53h0.8l36.9-50.7h30.8L908,51.7l44.3,74.5h-30.6l-30.2-52.2l-14.4,19v33.2H849.1z"></path>
+    <path d="M965.8,126.2V2.3h77.5v23.6h-49.6v24.9h42.2v23.4h-42.2v28.5h51.5v23.6H965.8z"></path>
+    <path d="M1069.9,126.2V2.3h44.7c6.6,0,12.8,0.6,18.5,1.9c5.8,1.3,10.8,3.4,15.1,6.4c4.3,3,7.7,6.9,10.3,11.9 c2.5,4.9,3.8,11.1,3.8,18.4c0,9.1-2,16.6-6,22.5c-4,5.9-9.3,10.3-16.1,13.2l28.1,49.6h-31.3l-23.8-44.6h-15.4v44.6H1069.9z  M1097.8,59.3h14.4c7.3,0,12.9-1.5,16.8-4.7c3.9-3.1,5.8-7.7,5.8-13.8s-1.9-10.3-5.8-12.7c-3.9-2.4-9.5-3.6-16.8-3.6h-14.4V59.3z"></path>
+    <path d="M1221.5,128.4c-8.1,0-16.2-1.5-24.2-4.5c-8-3-15.2-7.4-21.6-13.4l16-19.2c4.4,3.8,9.3,6.9,14.7,9.3 c5.4,2.4,10.7,3.6,15.9,3.6c5.8,0,10.2-1.1,13-3.2c2.9-2.2,4.3-5.1,4.3-8.7c0-1.9-0.4-3.5-1.2-4.9c-0.8-1.4-2-2.6-3.6-3.7 c-1.6-1.1-3.5-2.1-5.7-3c-2.2-1-4.7-2-7.3-3.1l-16.1-6.8c-3.2-1.3-6.2-2.9-9.2-4.9c-3-2-5.6-4.4-8-7.1c-2.3-2.7-4.2-5.9-5.6-9.5 c-1.4-3.6-2.1-7.7-2.1-12.3c0-5.1,1.1-9.8,3.2-14.3c2.2-4.5,5.2-8.4,9.1-11.8c3.9-3.4,8.6-6,14-7.9c5.4-1.9,11.3-2.9,17.8-2.9 c7.2,0,14.3,1.4,21.4,4.2c7,2.8,13.2,6.8,18.5,12.2L1250.4,34c-4.1-3.2-8.1-5.6-12.2-7.3c-4.1-1.7-8.5-2.6-13.5-2.6 c-4.8,0-8.6,1-11.5,2.9c-2.8,2-4.3,4.7-4.3,8.3c0,1.9,0.5,3.5,1.4,4.8s2.3,2.5,4,3.6c1.7,1.1,3.7,2.1,6,3c2.3,1,4.8,2,7.4,3.1 l16,6.5c7.6,3,13.6,7.2,18,12.5s6.6,12.4,6.6,21.1c0,5.2-1,10.1-3.1,14.7c-2.1,4.6-5.1,8.7-9.1,12.2c-4,3.5-8.9,6.3-14.7,8.4 C1235.4,127.4,1228.8,128.4,1221.5,128.4z"></path>
+  </svg>
+<!----></div>
+
+      </a>
+      <a href="/ideas" id="ember113871" class="ember-view site-header__nav-link
+                 site-header__nav-link--ideas
+                 ">
+        Ideas DB
+      </a>
+      <a href="/products" id="ember113872" class="ember-view site-header__nav-link
+                 site-header__nav-link--products
+                 ">
+        Products DB
+      </a>
+    </nav>
+
+     
+
+    <div class="site-header__right">
+        <a href="/sign-up" id="ember113873" class="ember-view site-header__auth-link">
+          <span class="site-header__auth-label">Join</span>
+        </a>
+          </div>
+  </div>
+
+
+</header>
+
+
+<!---->
+<!---->
+<!---->
+<!---->
+  
+
+<div class="post-page
+           post-page--post
+           
+           post-page--fastboot
+           
+           
+           
+           
+           
+           
+           " postid="f6745260fd">
+
+
+<!---->
+
+  <div class="post-page__content">
+
+      <div class="post-page__actions">
+        <div class="post-page__actions-content">
+            <div class="post-page__upvotes">
+              <a href="/sign-up" id="ember113875" class="post-liker ember-view"><div class="post-liker__icon-wrapper">
+  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" id="ember113876" class="ember-view post-liker__icon">  <path d="M0 15.878 l12-11.878 12 11.878-4 4.122-8-8-8 8-4-4.122z">
+<!---->  </path>
+</svg>
+</div>
+
+<div class="post-liker__text">
+    <div class="post-liker__count">44</div>
+      <div class="post-liker__likes-label">
+        Likes
+      </div>
+</div>
+</a>
             </div>
-            <div class="comment__footer">
-              <div class="footer__user-link">
-                <span class="user-link__name">bob</span>
-              </div>
-              <a class="footer__date" title="Saturday, March 29th 2026 (10:00 am)">an hour ago</a>
-            </div>
+
+            <button id="ember113877" class="post-bookmarker ember-view post-page__stat post-page__stat--bookmarks"><div class="post-bookmarker__icon-wrapper">
+  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" id="ember113878" class="ember-view post-bookmarker__icon">  <path d="M19 24l-7-6-7 6v-24h14v24z">
+<!---->  </path>
+</svg>
+</div>
+
+<label class="post-bookmarker__label-wrapper">
+    <span class="post-bookmarker__label-count">2</span>
+    <span class="post-bookmarker__label-text">Bookmarks</span>
+</label>
+</button>
+
+              <a href="/sign-in" id="ember113879" class="ember-view post-page__stat post-page__stat--comments">
+                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" id="ember113880" class="ember-view post-page__stat-icon">  <path d="M12 1c-6.338 0-12 4.226-12 10.007 0 2.05.738 4.063 2.047 5.625.055 1.83-1.023 4.456-1.993 6.368 2.602-.47 6.301-1.508 7.978-2.536 9.236 2.247 15.968-3.405 15.968-9.457 0-5.812-5.701-10.007-12-10.007zm0 14h-6v-1h6v1zm6-3h-12v-1h12v1zm0-3h-12v-1h12v1z">
+<!---->  </path>
+</svg>
+                <span>
+                  15
+                  <span class="post-page__stat-label">Comments</span>
+                </span>
+              </a>
+
+<!---->
+<!---->
+          <div class="post-page__admin-actions">
+<!---->
+<!---->
+              <button aria-label="Report Post" class="post-page__admin-action post-page__admin-action--report" type="button">
+                <div class="admin-action__button-content">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" id="ember113881" class="ember-view admin-action__button-icon">  <path d="M12 1l-12 22h24l-12-22zm-1 8h2v7h-2v-7zm1 11.25c-.69 0-1.25-.56-1.25-1.25s.56-1.25 1.25-1.25 1.25.56 1.25 1.25-.56 1.25-1.25 1.25z">
+<!---->  </path>
+</svg>
+                  <p class="admin-action__button-label">Report</p>
+                </div>
+              </button>
           </div>
         </div>
+      </div>
+
+
+      <header class="post-page__header ">
+
+            <h1 class="post-page__title" balance-text>
+              How do you make a successful post on Indie Hackers?
+            </h1>
+
+            <div class="post-page__byline">
+              by
+                <a href="/csallen" id="ember113882" class="ember-view post-page__byline-author">
+                  <span>Courtland Allen</span></a><!----><!---->            </div>
+
+<!---->      </header>
+
+
+      <div class="post-page__main">
+<!---->          <div id="ember113883" class="post-page__body content ember-view">    <p>Here are a few tips, in no particular order:</p>
+<p>• <strong>Treat your posts like writing copy</strong> for your landing pages, cold emails, etc. The same rules apply! Understand your audience, and catch their attention by appealing to their problems or desires. State their problems first, and put your solution/question/offer later.</p>
+<p>(FYI, the top reasons people come to Indie Hackers are: inspiration and motivation, tips and advice, and networking and connection with other founders. The top anxieties IHers feel about their startups are: trouble growing, coming up with and validating ideas, making the right decisions as a founder, and hiring.)</p>
+<p>• <strong>Ask a question.</strong> Posts with questions in the title are more successful than posts without. Generally, this is because asking a question means you're thinking about your readers' state of mind, not just yourself and your desires.</p>
+<p>• <strong>Start a discussion.</strong> Forums are a place to converse! One-sided announcements are boring. The best posts encourage readers to respond, and make it easy for them to do so. Our ranking algorithm rewards posts that generate discussion and have more comments.</p>
+<p>• <strong>Engage people where they are.</strong> This is true of all channels, really. If you're tweeting, you should put the useful info in the tweet itself, not in a link to a blog post. Same on Indie Hackers. If you're just posting links to your blog, you won't find a lot of success.</p>
+<p>• <strong>Help others</strong> out. As <a target="_blank" href="/patio11">@patio11</a> and others are fond of saying, &quot;being helpful on the Internet&quot; is vastly underrated. People will remember.</p>
+<p>• <strong>Look at what's worked</strong> in the past. It's quite easy to scroll through the best posts on a <a target="_blank" href="https://www.indiehackers.com/top/week-of-2019-06-17">weekly</a> or <a target="_blank" href="https://www.indiehackers.com/top/month-of-2019-06">monthly</a> basis and see the common patterns around what works well.</p>
+<p>• <strong>Keep trying!</strong> If at first you don't succeed, there's no law against coming back to try again.</p>
+<p>• <strong>Post milestones.</strong> I highly recommend <a target="_blank" href="https://www.indiehackers.com/products">creating a product page</a> if you haven't already, and posting new milestones on a regular basis. Don't just share what you accomplished, but also share what you learned. Again, &quot;be helpful on the Internet.&quot;</p>
+<p>• <strong>Keep it short.</strong> If someone opens up your posts and sees a giant wall of text, they're unlikely to engage, especially if you're just asking for help rather than offering it. Make it easy for people.</p>
+<p>• <strong>Get to the point.</strong> Skip the fluff, skip the context, skip the backstory. You should start offering value in your post in the first few sentences. Again, make it easy for people.</p>
+<p>• <strong>Put in a clear call-to-action.</strong> If you have a question, put it at the end on its own line with a clear question mark. If you have a link, again, put it at the end in its own paragraph. People won't know what to do if you don't make it clear to them.</p>
+<p>Hope this helps!</p>
+<p>If you have any questions about how to get the most out of the site, just ask below! Or feel free to tag the wonderful <a target="_blank" href="/rosiesherry">@rosiesherry</a> in any of your posts in the future.</p>
+
+</div>
+
+<!---->
+<!---->
+<!---->      </div>
+
+
+    <div class="post-page__footer">
+
+
+        <div class="post-page__signature
+                    ">
+
+
+            <div class="post-page__inline-author">
+                <div class="user-link
+           
+           
+           ">
+    <a target="_self" href="/csallen?id=ibTLPyjwVebnZjMGKvz6ztarnuV2" id="ember113884" class="ember-view user-link__link">
+        <picture id="ember113885" class="user-avatar ember-view user-link__avatar">  <source alt="Avatar for Courtland Allen" loading="eager" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/96x96_ibTLPyjwVebnZjMGKvz6ztarnuV2.webp" type="image/webp">
+  <source alt="Avatar for Courtland Allen" loading="eager" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/ibTLPyjwVebnZjMGKvz6ztarnuV2" type="image/png">
+    <source alt="Avatar for Courtland Allen" loading="eager" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/ibTLPyjwVebnZjMGKvz6ztarnuV2" type="image/jpeg">
+
+  <img loading="eager" src="/nonexistent-image.png" alt="Avatar for Courtland Allen">
+</picture>
+
+<!---->
+          <span class="user-link__name">
+            Courtland Allen
+          </span>
+
+
+
+<!---->
+      
+
+<!---->    </a>
+
+
+<!---->
+<!----></div>
+<!----><!---->            </div>
+          
+
+<!---->
+
+            <a title="Tuesday, June 18th 2019 (6:59 pm)" href="/post/how-do-you-make-a-successful-post-on-indie-hackers-f6745260fd" id="ember113886" class="active ember-view post-page__date">
+              on <span>June 18, 2019</span>
+            </a>
+        </div>
+
+
+        <div class="post-page__inline-actions">
+          <button href="/sign-up" id="ember113887" class="post-liker ember-view inline-actions__action inline-actions__action--like"><div class="post-liker__icon-wrapper">
+  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" id="ember113888" class="ember-view post-liker__icon">  <path d="M0 15.878 l12-11.878 12 11.878-4 4.122-8-8-8 8-4-4.122z">
+<!---->  </path>
+</svg>
+</div>
+
+<div class="post-liker__text">
+    <div class="post-liker__count">44</div>
+<!----></div>
+</button>
+          <button id="ember113889" class="post-bookmarker ember-view inline-actions__action inline-actions__action--bookmark"><div class="post-bookmarker__icon-wrapper">
+  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" id="ember113890" class="ember-view post-bookmarker__icon">  <path d="M19 24l-7-6-7 6v-24h14v24z">
+<!---->  </path>
+</svg>
+</div>
+
+<label class="post-bookmarker__label-wrapper">
+    <span class="post-bookmarker__label-count">2</span>
+    <span class="post-bookmarker__label-text"></span>
+</label>
+</button>
+          <div id="ember113891" class="share-button dropdown-menu share-button--collapsed ember-view inline-actions__share-button"><button aria-label="Share Post" class="share-button__button" type="button">
+  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" id="ember113892" class="ember-view share-button__button-icon">  <path d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z">
+<!---->  </path>
+</svg>
+    <label class="share-button__button-label">Share</label>
+</button>
+
+<!----></div>
+        </div>
+      
+
+        <div class="post-page__comments" id="comments">
+<!---->          <div id="ember113893" class="embedded-comments embedded-comments--has-comments embedded-comments--3-levels ember-view">
+    <div id="ember113894" class="comment-box comment-box--empty comment-box--unfocused ember-view comment-box--top-level"><div class="comment-box__field-wrapper">
+    <a href="/sign-up" id="ember113895" class="ember-view comment-box__textarea" rows="4">
+      Say something nice to csallen…
+    </a>
+<!---->
+  <div class="comment-box__actions">
+      <a href="/sign-up" id="ember113896" class="ember-view comment-box__save-button">
+        Post Comment
+      </a>
+
+<!---->
+<!---->
+<!---->  </div>
+</div>
+
+<!----></div>
+
+    <ol id="ember113897" class="comment-tree comment-tree--level-1 ember-view">
+
+      <li>
+        <div id="ember113898" class="comment comment--on-desktop ember-view">
+  <a href="/sign-up" id="ember113899" class="comment-voter ember-view"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" id="ember113900" class="ember-view comment-voter__icon comment-voter__icon--upvote">  <path d="M0 15.878 l12-11.878 12 11.878-4 4.122-8-8-8 8-4-4.122z">
+<!---->  </path>
+</svg>
+
+<div class="comment-voter__score">1</div>
+
+<!----></a>
+
+<div class="comment__main">
+
+<!---->
+
+
+
+        <div id="ember113901" class="comment__content content ember-view">    <p>Thanks, I had trouble posting there before.</p>
+
+</div>
+      
+
+    <div class="comment__footer">
+      <div class="user-link
+           
+           
+            footer__user-link">
+    <a target="_self" href="/indieola22?id=MOrbR5pNVBZPR0KfUCnWtZcjN5q1" id="ember113902" class="ember-view user-link__link">
+        <picture id="ember113903" class="user-avatar ember-view user-link__avatar">  <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/52x52_MOrbR5pNVBZPR0KfUCnWtZcjN5q1.webp" type="image/webp">
+  <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/MOrbR5pNVBZPR0KfUCnWtZcjN5q1" type="image/png">
+    <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/MOrbR5pNVBZPR0KfUCnWtZcjN5q1" type="image/jpeg">
+
+  <img loading="lazy" src="/nonexistent-image.png" alt="User Avatar">
+</picture>
+
+<!---->
+          <span class="user-link__name user-link__name--username">
+              indieola22
+          </span>
+
+
+<!---->
+      
+
+<!---->    </a>
+
+
+<!---->
+<!----></div>
+
+
+      <div class="footer__separator">·</div>
+        <a rel="nofollow" title="Friday, May 9th 2025 (11:53 am)" href="/post/how-do-you-make-a-successful-post-on-indie-hackers-f6745260fd?commentId=-OPotEVfwvIqplT4v0gx" id="ember113904" class="ember-view footer__date">
+          a year ago
+        </a>
+
+<!---->
+          <div class="footer__separator">·</div>
+            <a href="/sign-up" id="ember113905" class="ember-view footer__action footer__action--reply">
+              Reply
+            </a>
+
+<!---->
+<!---->
+    </div>
+
+
+<!----></div>
+</div>
+
+<!---->
+          <ol id="ember113906" class="comment-tree comment-tree--level-2 ember-view">
+
+<!----></ol>
       </li>
       <li>
-        <div class="comment">
-          <div class="comment__main">
-            <div class="comment__content content">
-              <p>Second comment</p>
-            </div>
-            <div class="comment__footer">
-              <div class="footer__user-link">
-                <span class="user-link__name">carol</span>
-              </div>
-              <a class="footer__date" title="Saturday, March 29th 2026 (10:15 am)">45 minutes ago</a>
-            </div>
-          </div>
-        </div>
+        <div id="ember113907" class="comment comment--on-desktop ember-view">
+  <a href="/sign-up" id="ember113908" class="comment-voter ember-view"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" id="ember113909" class="ember-view comment-voter__icon comment-voter__icon--upvote">  <path d="M0 15.878 l12-11.878 12 11.878-4 4.122-8-8-8 8-4-4.122z">
+<!---->  </path>
+</svg>
+
+<div class="comment-voter__score">4</div>
+
+<!----></a>
+
+<div class="comment__main">
+
+<!---->
+
+
+
+        <div id="ember113910" class="comment__content content ember-view">    <blockquote>
+<p>Help others out.</p>
+</blockquote>
+<p>I wish it were this way. Many of the top posts on the front page right now are trumpeting some personal win and at least one is straight up trying to hustle the IH audience and offering a giveaway for their product (for which  they previously <a target="_blank" rel="nofollow" href="https://www.indiehackers.com/post/8362dae2e3?commentId=-Lf7fV0wJ6zOPAXa5FbH">made and then deleted claims of media exposure</a>). And to enter this giveaway users have to like the post (thus distorting your algorithm).</p>
+<p>This is my single biggest frustration with IH. So many of the heaviest users are primarily in it just for themselves, and in some cases have successfully sold products to IHers who deeply regretted the purchase.</p>
+<p>For all of Reddit's issues, I've found it to be a place where helping strangers is part of the ethos (and hustling them is not).</p>
+
+</div>
+      
+
+    <div class="comment__footer">
+      <div class="user-link
+           
+           
+            footer__user-link">
+    <a target="_self" href="/alchemist?id=LiofXYXkILfSwOL4AESMQUUWuIx2" id="ember113911" class="ember-view user-link__link">
+        <picture id="ember113912" class="user-avatar ember-view user-link__avatar">  <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/52x52_LiofXYXkILfSwOL4AESMQUUWuIx2.webp" type="image/webp">
+  <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/LiofXYXkILfSwOL4AESMQUUWuIx2" type="image/png">
+    <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/LiofXYXkILfSwOL4AESMQUUWuIx2" type="image/jpeg">
+
+  <img loading="lazy" src="/nonexistent-image.png" alt="User Avatar">
+</picture>
+
+<!---->
+          <span class="user-link__name user-link__name--username">
+              alchemist
+          </span>
+
+
+<!---->
+      
+
+<!---->    </a>
+
+
+<!---->
+<!----></div>
+
+
+      <div class="footer__separator">·</div>
+        <a rel="nofollow" title="Tuesday, June 18th 2019 (11:40 pm)" href="/post/how-do-you-make-a-successful-post-on-indie-hackers-f6745260fd?commentId=-LhgxkqsA1VeujGWgpIS" id="ember113913" class="ember-view footer__date">
+          7 years ago
+        </a>
+
+<!---->
+          <div class="footer__separator">·</div>
+            <a href="/sign-up" id="ember113914" class="ember-view footer__action footer__action--reply">
+              Reply
+            </a>
+
+<!---->
+<!---->
+    </div>
+
+
+<!----></div>
+</div>
+
+<!---->
+          <ol id="ember113915" class="comment-tree comment-tree--level-2 ember-view">
+
+      <li>
+        <div id="ember113916" class="comment comment--on-desktop ember-view">
+  <a href="/sign-up" id="ember113917" class="comment-voter ember-view"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" id="ember113918" class="ember-view comment-voter__icon comment-voter__icon--upvote">  <path d="M0 15.878 l12-11.878 12 11.878-4 4.122-8-8-8 8-4-4.122z">
+<!---->  </path>
+</svg>
+
+<div class="comment-voter__score">1</div>
+
+<!----></a>
+
+<div class="comment__main">
+
+<!---->
+
+
+
+        <div id="ember113919" class="comment__content content ember-view">    <p>The #1 reason cited for why people come to IH is for inspiration and motivation, and the #2 reason is for tips and advice. So posts where people share their wins are actually quite helpful and popular for a reason!</p>
+<p>The top posts on both r/startups and r/Entrepreneur are often about sharing wins as well, and I'd like to see more of that on IH, as well as more details about <em>how</em> people had those wins and what they learned in the process.</p>
+<p>What subreddits are you talking about in particular? Anything startup-related? What types of posts do you enjoy the most?</p>
+
+</div>
+      
+
+    <div class="comment__footer">
+      <div class="user-link
+           
+           
+            footer__user-link">
+    <a target="_self" href="/csallen?id=ibTLPyjwVebnZjMGKvz6ztarnuV2" id="ember113920" class="ember-view user-link__link">
+        <picture id="ember113921" class="user-avatar ember-view user-link__avatar">  <source alt="Avatar for Courtland Allen" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/52x52_ibTLPyjwVebnZjMGKvz6ztarnuV2.webp" type="image/webp">
+  <source alt="Avatar for Courtland Allen" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/ibTLPyjwVebnZjMGKvz6ztarnuV2" type="image/png">
+    <source alt="Avatar for Courtland Allen" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/ibTLPyjwVebnZjMGKvz6ztarnuV2" type="image/jpeg">
+
+  <img loading="lazy" src="/nonexistent-image.png" alt="Avatar for Courtland Allen">
+</picture>
+
+<!---->
+          <span class="user-link__name user-link__name--username">
+              csallen
+          </span>
+
+
+<!---->
+      
+
+<!---->    </a>
+
+
+<!---->
+<!----></div>
+
+
+      <div class="footer__separator">·</div>
+        <a rel="nofollow" title="Wednesday, June 19th 2019 (5:02 pm)" href="/post/how-do-you-make-a-successful-post-on-indie-hackers-f6745260fd?commentId=-LhkgDA4Bjs1xnBWrSai" id="ember113922" class="ember-view footer__date">
+          7 years ago
+        </a>
+
+<!---->
+          <div class="footer__separator">·</div>
+            <a href="/sign-up" id="ember113923" class="ember-view footer__action footer__action--reply">
+              Reply
+            </a>
+
+<!---->
+<!---->
+    </div>
+
+
+<!----></div>
+</div>
+
+<!---->
+          <ol id="ember113924" class="comment-tree comment-tree--level-3 ember-view">
+
+      <li>
+        <div id="ember113925" class="comment comment--on-desktop ember-view">
+  <a href="/sign-up" id="ember113926" class="comment-voter ember-view"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" id="ember113927" class="ember-view comment-voter__icon comment-voter__icon--upvote">  <path d="M0 15.878 l12-11.878 12 11.878-4 4.122-8-8-8 8-4-4.122z">
+<!---->  </path>
+</svg>
+
+<div class="comment-voter__score">1</div>
+
+<!----></a>
+
+<div class="comment__main">
+
+<!---->
+
+
+
+        <div id="ember113928" class="comment__content content ember-view">    <p>I'm on a bunch of subreddits (many technical/econ/cultural) but not either of those</p>
+<blockquote>
+<p>What types of posts do you enjoy the most?</p>
+</blockquote>
+<p>Reddit's main page used to have this type of great content a lot—pmarca's blog, PG essays, etc. More recently, I enjoyed posts on the Millionaire Fastlane, several Mixergy interviews, the Blake Masters/ZtO notes, etc. In each case, they weren't trying to sell their offering to me.</p>
+<p>PG has never wanted my money. In one sense, yes, PG later had a goal of getting people to apply to YC, but even in that case, his incentives would have been aligned with mine. This alignment of incentives allows for more useful content!</p>
+<p>In contrast, I don't learn <em>anything</em> from a breathless post that someone has &quot;launched&quot; on Product Hunt. On hundreds of occasions, I've wasted 30 seconds or more reading a post that was a sales pitch disguised as a question or as a tutorial only to realize it was a waste. Others have purchased products or productized services from IH power users (here more to hustle than to discuss)... and been burned.</p>
+<p>IH being overrun with so many borderline spammers and hustlers has lowered the EV of clicking on any posts at all. Would you enjoy going to tech meetups locally if 1/4 to 1/3 of the people who said hi to you were trying to sell you something? Would you learn as much? Would it be useful?</p>
+<p>Maybe I'm just not using IH correctly and <em>it's me who should</em> be treating it as a promotional channel (like Twitter) but that wasn't what initially brought me here.</p>
+
+</div>
+      
+
+    <div class="comment__footer">
+      <div class="user-link
+           
+           
+            footer__user-link">
+    <a target="_self" href="/alchemist?id=LiofXYXkILfSwOL4AESMQUUWuIx2" id="ember113929" class="ember-view user-link__link">
+        <picture id="ember113930" class="user-avatar ember-view user-link__avatar">  <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/52x52_LiofXYXkILfSwOL4AESMQUUWuIx2.webp" type="image/webp">
+  <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/LiofXYXkILfSwOL4AESMQUUWuIx2" type="image/png">
+    <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/LiofXYXkILfSwOL4AESMQUUWuIx2" type="image/jpeg">
+
+  <img loading="lazy" src="/nonexistent-image.png" alt="User Avatar">
+</picture>
+
+<!---->
+          <span class="user-link__name user-link__name--username">
+              alchemist
+          </span>
+
+
+<!---->
+      
+
+<!---->    </a>
+
+
+<!---->
+<!----></div>
+
+
+      <div class="footer__separator">·</div>
+        <a rel="nofollow" title="Saturday, June 22nd 2019 (6:00 pm)" href="/post/how-do-you-make-a-successful-post-on-indie-hackers-f6745260fd?commentId=-Li-LBiBjk5Ra9Qtsr3u" id="ember113931" class="ember-view footer__date">
+          7 years ago
+        </a>
+
+<!---->
+          <div class="footer__separator">·</div>
+            <a href="/sign-up" id="ember113932" class="ember-view footer__action footer__action--reply">
+              Reply
+            </a>
+
+<!---->
+<!---->
+    </div>
+
+
+<!----></div>
+</div>
+
+<!---->
+          <ol id="ember113933" class="comment-tree comment-tree--level-4 ember-view">
+
+<!----></ol>
       </li>
-    </ol>
-  </body>
-</html>
+</ol>
+      </li>
+</ol>
+      </li>
+      <li>
+        <div id="ember113934" class="comment comment--on-desktop ember-view">
+  <a href="/sign-up" id="ember113935" class="comment-voter ember-view"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" id="ember113936" class="ember-view comment-voter__icon comment-voter__icon--upvote">  <path d="M0 15.878 l12-11.878 12 11.878-4 4.122-8-8-8 8-4-4.122z">
+<!---->  </path>
+</svg>
+
+<div class="comment-voter__score">4</div>
+
+<!----></a>
+
+<div class="comment__main">
+
+<!---->
+
+
+
+        <div id="ember113937" class="comment__content content ember-view">    <p>Absolutely agree - excellent summary! (and good advice for posting anywhere, not just IH)</p>
+<p>One little point I wanted to expand on though...</p>
+<blockquote>
+<p>Get to the point. Skip the fluff, skip the context, skip the backstory. You should start offering value in your post in the first few sentences.</p>
+</blockquote>
+<p>This is great advice.</p>
+<p><strong>But</strong>...</p>
+<p>If you're asking for feedback/help, make sure you include enough context and backstory for others to be able to give you a useful answer :)</p>
+<p>So often I end up not replying to posts where the founder wants help with something but has just been way too vague for me to be able to even begin to add value.</p>
+
+</div>
+      
+
+    <div class="comment__footer">
+      <div class="user-link
+           
+           
+            footer__user-link">
+    <a target="_self" href="/louisswiss?id=mCj6GaBNDtdqwYMtcE29e3BeYX82" id="ember113938" class="ember-view user-link__link">
+        <picture id="ember113939" class="user-avatar ember-view user-link__avatar">  <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/52x52_mCj6GaBNDtdqwYMtcE29e3BeYX82.webp" type="image/webp">
+  <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/mCj6GaBNDtdqwYMtcE29e3BeYX82" type="image/png">
+    <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/mCj6GaBNDtdqwYMtcE29e3BeYX82" type="image/jpeg">
+
+  <img loading="lazy" src="/nonexistent-image.png" alt="User Avatar">
+</picture>
+
+<!---->
+          <span class="user-link__name user-link__name--username">
+              louisswiss
+          </span>
+
+
+<!---->
+      
+
+<!---->    </a>
+
+
+<!---->
+<!----></div>
+
+
+      <div class="footer__separator">·</div>
+        <a rel="nofollow" title="Tuesday, June 18th 2019 (10:03 pm)" href="/post/how-do-you-make-a-successful-post-on-indie-hackers-f6745260fd?commentId=-LhgbTB3ljOuKoOqmjTe" id="ember113940" class="ember-view footer__date">
+          7 years ago
+        </a>
+
+<!---->
+          <div class="footer__separator">·</div>
+            <a href="/sign-up" id="ember113941" class="ember-view footer__action footer__action--reply">
+              Reply
+            </a>
+
+<!---->
+<!---->
+    </div>
+
+
+<!----></div>
+</div>
+
+<!---->
+          <ol id="ember113942" class="comment-tree comment-tree--level-2 ember-view">
+
+      <li>
+        <div id="ember113943" class="comment comment--on-desktop ember-view">
+  <a href="/sign-up" id="ember113944" class="comment-voter ember-view"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" id="ember113945" class="ember-view comment-voter__icon comment-voter__icon--upvote">  <path d="M0 15.878 l12-11.878 12 11.878-4 4.122-8-8-8 8-4-4.122z">
+<!---->  </path>
+</svg>
+
+<div class="comment-voter__score">1</div>
+
+<!----></a>
+
+<div class="comment__main">
+
+<!---->
+
+
+
+        <div id="ember113946" class="comment__content content ember-view">    <p>Agreed, good point.</p>
+
+</div>
+      
+
+    <div class="comment__footer">
+      <div class="user-link
+           
+           
+            footer__user-link">
+    <a target="_self" href="/csallen?id=ibTLPyjwVebnZjMGKvz6ztarnuV2" id="ember113947" class="ember-view user-link__link">
+        <picture id="ember113948" class="user-avatar ember-view user-link__avatar">  <source alt="Avatar for Courtland Allen" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/52x52_ibTLPyjwVebnZjMGKvz6ztarnuV2.webp" type="image/webp">
+  <source alt="Avatar for Courtland Allen" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/ibTLPyjwVebnZjMGKvz6ztarnuV2" type="image/png">
+    <source alt="Avatar for Courtland Allen" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/ibTLPyjwVebnZjMGKvz6ztarnuV2" type="image/jpeg">
+
+  <img loading="lazy" src="/nonexistent-image.png" alt="Avatar for Courtland Allen">
+</picture>
+
+<!---->
+          <span class="user-link__name user-link__name--username">
+              csallen
+          </span>
+
+
+<!---->
+      
+
+<!---->    </a>
+
+
+<!---->
+<!----></div>
+
+
+      <div class="footer__separator">·</div>
+        <a rel="nofollow" title="Tuesday, June 18th 2019 (10:49 pm)" href="/post/how-do-you-make-a-successful-post-on-indie-hackers-f6745260fd?commentId=-LhglrYKycxbRuKtKCiT" id="ember113949" class="ember-view footer__date">
+          7 years ago
+        </a>
+
+<!---->
+          <div class="footer__separator">·</div>
+            <a href="/sign-up" id="ember113950" class="ember-view footer__action footer__action--reply">
+              Reply
+            </a>
+
+<!---->
+<!---->
+    </div>
+
+
+<!----></div>
+</div>
+
+<!---->
+          <ol id="ember113951" class="comment-tree comment-tree--level-3 ember-view">
+
+<!----></ol>
+      </li>
+</ol>
+      </li>
+      <li>
+        <div id="ember113952" class="comment comment--on-desktop ember-view">
+  <a href="/sign-up" id="ember113953" class="comment-voter ember-view"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" id="ember113954" class="ember-view comment-voter__icon comment-voter__icon--upvote">  <path d="M0 15.878 l12-11.878 12 11.878-4 4.122-8-8-8 8-4-4.122z">
+<!---->  </path>
+</svg>
+
+<div class="comment-voter__score">1</div>
+
+<!----></a>
+
+<div class="comment__main">
+
+<!---->
+
+
+
+        <div id="ember113955" class="comment__content content ember-view">    <p>Really helpful post. Thanks for sharing this.</p>
+
+</div>
+      
+
+    <div class="comment__footer">
+      <div class="user-link
+           
+           
+            footer__user-link">
+    <a target="_self" href="/rabbal1892?id=EYZE2kHj4FSWTTCsyVKYd6d0K3o2" id="ember113956" class="ember-view user-link__link">
+        <picture id="ember113957" class="user-avatar ember-view user-link__avatar">  <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/52x52_EYZE2kHj4FSWTTCsyVKYd6d0K3o2.webp" type="image/webp">
+  <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/EYZE2kHj4FSWTTCsyVKYd6d0K3o2" type="image/png">
+    <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/EYZE2kHj4FSWTTCsyVKYd6d0K3o2" type="image/jpeg">
+
+  <img loading="lazy" src="/nonexistent-image.png" alt="User Avatar">
+</picture>
+
+<!---->
+          <span class="user-link__name user-link__name--username">
+              rabbal1892
+          </span>
+
+
+<!---->
+      
+
+<!---->    </a>
+
+
+<!---->
+<!----></div>
+
+
+      <div class="footer__separator">·</div>
+        <a rel="nofollow" title="Saturday, November 18th 2023 (3:29 am)" href="/post/how-do-you-make-a-successful-post-on-indie-hackers-f6745260fd?commentId=-NjVTSn3OQbBpCwnIgmM" id="ember113958" class="ember-view footer__date">
+          2 years ago
+        </a>
+
+<!---->
+          <div class="footer__separator">·</div>
+            <a href="/sign-up" id="ember113959" class="ember-view footer__action footer__action--reply">
+              Reply
+            </a>
+
+<!---->
+<!---->
+    </div>
+
+
+<!----></div>
+</div>
+
+<!---->
+          <ol id="ember113960" class="comment-tree comment-tree--level-2 ember-view">
+
+<!----></ol>
+      </li>
+      <li>
+        <div id="ember113961" class="comment comment--on-desktop ember-view">
+  <a href="/sign-up" id="ember113962" class="comment-voter ember-view"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" id="ember113963" class="ember-view comment-voter__icon comment-voter__icon--upvote">  <path d="M0 15.878 l12-11.878 12 11.878-4 4.122-8-8-8 8-4-4.122z">
+<!---->  </path>
+</svg>
+
+<div class="comment-voter__score">1</div>
+
+<!----></a>
+
+<div class="comment__main">
+
+<!---->
+
+
+
+        <div id="ember113964" class="comment__content content ember-view">    <p>This is a great article! I had trouble writing posts in Indie Hackers and now have more clue. Thanks!</p>
+
+</div>
+      
+
+    <div class="comment__footer">
+      <div class="user-link
+           
+           
+            footer__user-link">
+    <a target="_self" href="/itsrebecccca?id=M4VQQ4Ya1ThDzDizP1qL97qrNxt1" id="ember113965" class="ember-view user-link__link">
+        <picture id="ember113966" class="user-avatar ember-view user-link__avatar">  <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/52x52_M4VQQ4Ya1ThDzDizP1qL97qrNxt1.webp" type="image/webp">
+  <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/M4VQQ4Ya1ThDzDizP1qL97qrNxt1" type="image/png">
+    <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/M4VQQ4Ya1ThDzDizP1qL97qrNxt1" type="image/jpeg">
+
+  <img loading="lazy" src="/nonexistent-image.png" alt="User Avatar">
+</picture>
+
+<!---->
+          <span class="user-link__name user-link__name--username">
+              itsrebecccca
+          </span>
+
+
+<!---->
+      
+
+<!---->    </a>
+
+
+<!---->
+<!----></div>
+
+
+      <div class="footer__separator">·</div>
+        <a rel="nofollow" title="Sunday, May 7th 2023 (11:00 pm)" href="/post/how-do-you-make-a-successful-post-on-indie-hackers-f6745260fd?commentId=-NUsR_ejlHJyLy7bAExo" id="ember113967" class="ember-view footer__date">
+          3 years ago
+        </a>
+
+<!---->
+          <div class="footer__separator">·</div>
+            <a href="/sign-up" id="ember113968" class="ember-view footer__action footer__action--reply">
+              Reply
+            </a>
+
+<!---->
+<!---->
+    </div>
+
+
+<!----></div>
+</div>
+
+<!---->
+          <ol id="ember113969" class="comment-tree comment-tree--level-2 ember-view">
+
+<!----></ol>
+      </li>
+      <li>
+        <div id="ember113970" class="comment comment--on-desktop ember-view">
+  <a href="/sign-up" id="ember113971" class="comment-voter ember-view"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" id="ember113972" class="ember-view comment-voter__icon comment-voter__icon--upvote">  <path d="M0 15.878 l12-11.878 12 11.878-4 4.122-8-8-8 8-4-4.122z">
+<!---->  </path>
+</svg>
+
+<div class="comment-voter__score">1</div>
+
+<!----></a>
+
+<div class="comment__main">
+
+<!---->
+
+
+
+        <div id="ember113973" class="comment__content content ember-view">    <p>this is really helpful!</p>
+
+</div>
+      
+
+    <div class="comment__footer">
+      <div class="user-link
+           
+           
+            footer__user-link">
+    <a target="_self" href="/alsadiq?id=FDdPKFS5lbYMOUaUHihUFKurtdk2" id="ember113974" class="ember-view user-link__link">
+        <picture id="ember113975" class="user-avatar ember-view user-link__avatar">  <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/52x52_FDdPKFS5lbYMOUaUHihUFKurtdk2.webp" type="image/webp">
+  <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/FDdPKFS5lbYMOUaUHihUFKurtdk2" type="image/png">
+    <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/FDdPKFS5lbYMOUaUHihUFKurtdk2" type="image/jpeg">
+
+  <img loading="lazy" src="/nonexistent-image.png" alt="User Avatar">
+</picture>
+
+<!---->
+          <span class="user-link__name user-link__name--username">
+              alsadiq
+          </span>
+
+
+<!---->
+      
+
+<!---->    </a>
+
+
+<!---->
+<!----></div>
+
+
+      <div class="footer__separator">·</div>
+        <a rel="nofollow" title="Saturday, April 29th 2023 (12:16 am)" href="/post/how-do-you-make-a-successful-post-on-indie-hackers-f6745260fd?commentId=-NU9MZmxgSZLnsj92Umf" id="ember113976" class="ember-view footer__date">
+          3 years ago
+        </a>
+
+<!---->
+          <div class="footer__separator">·</div>
+            <a href="/sign-up" id="ember113977" class="ember-view footer__action footer__action--reply">
+              Reply
+            </a>
+
+<!---->
+<!---->
+    </div>
+
+
+<!----></div>
+</div>
+
+<!---->
+          <ol id="ember113978" class="comment-tree comment-tree--level-2 ember-view">
+
+<!----></ol>
+      </li>
+      <li>
+        <div id="ember113979" class="comment comment--on-desktop ember-view">
+  <a href="/sign-up" id="ember113980" class="comment-voter ember-view"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" id="ember113981" class="ember-view comment-voter__icon comment-voter__icon--upvote">  <path d="M0 15.878 l12-11.878 12 11.878-4 4.122-8-8-8 8-4-4.122z">
+<!---->  </path>
+</svg>
+
+<div class="comment-voter__score">1</div>
+
+<!----></a>
+
+<div class="comment__main">
+
+<!---->
+
+
+
+        <div id="ember113982" class="comment__content content ember-view">    <p>Really helpful tips! Thanks!</p>
+
+</div>
+      
+
+    <div class="comment__footer">
+      <div class="user-link
+           
+           
+            footer__user-link">
+    <a target="_self" href="/KristinanitsirK?id=IKgImiiyd1SWO98F7Av08bq2aeC3" id="ember113983" class="ember-view user-link__link">
+        <picture id="ember113984" class="user-avatar ember-view user-link__avatar">  <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/52x52_IKgImiiyd1SWO98F7Av08bq2aeC3.webp" type="image/webp">
+  <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/IKgImiiyd1SWO98F7Av08bq2aeC3" type="image/png">
+    <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/IKgImiiyd1SWO98F7Av08bq2aeC3" type="image/jpeg">
+
+  <img loading="lazy" src="/nonexistent-image.png" alt="User Avatar">
+</picture>
+
+<!---->
+          <span class="user-link__name user-link__name--username">
+              KristinanitsirK
+          </span>
+
+
+<!---->
+      
+
+<!---->    </a>
+
+
+<!---->
+<!----></div>
+
+
+      <div class="footer__separator">·</div>
+        <a rel="nofollow" title="Monday, March 6th 2023 (2:05 pm)" href="/post/how-do-you-make-a-successful-post-on-indie-hackers-f6745260fd?commentId=-NPrETTduCKpUDMnl3cI" id="ember113985" class="ember-view footer__date">
+          3 years ago
+        </a>
+
+<!---->
+          <div class="footer__separator">·</div>
+            <a href="/sign-up" id="ember113986" class="ember-view footer__action footer__action--reply">
+              Reply
+            </a>
+
+<!---->
+<!---->
+    </div>
+
+
+<!----></div>
+</div>
+
+<!---->
+          <ol id="ember113987" class="comment-tree comment-tree--level-2 ember-view">
+
+<!----></ol>
+      </li>
+      <li>
+        <div id="ember113988" class="comment comment--on-desktop ember-view">
+  <a href="/sign-up" id="ember113989" class="comment-voter ember-view"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" id="ember113990" class="ember-view comment-voter__icon comment-voter__icon--upvote">  <path d="M0 15.878 l12-11.878 12 11.878-4 4.122-8-8-8 8-4-4.122z">
+<!---->  </path>
+</svg>
+
+<div class="comment-voter__score">1</div>
+
+<!----></a>
+
+<div class="comment__main">
+
+<!---->
+
+
+
+        <div id="ember113991" class="comment__content content ember-view">    <p>thanks for this helpful article</p>
+
+</div>
+      
+
+    <div class="comment__footer">
+      <div class="user-link
+           
+           
+            footer__user-link">
+    <a target="_self" href="/EricDarnell?id=nrrOLJJINQOSmLU5D9EzqytokPd2" id="ember113992" class="ember-view user-link__link">
+        <picture id="ember113993" class="user-avatar ember-view user-link__avatar">  <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/52x52_nrrOLJJINQOSmLU5D9EzqytokPd2.webp" type="image/webp">
+  <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/nrrOLJJINQOSmLU5D9EzqytokPd2" type="image/png">
+    <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/nrrOLJJINQOSmLU5D9EzqytokPd2" type="image/jpeg">
+
+  <img loading="lazy" src="/nonexistent-image.png" alt="User Avatar">
+</picture>
+
+<!---->
+          <span class="user-link__name user-link__name--username">
+              EricDarnell
+          </span>
+
+
+<!---->
+      
+
+<!---->    </a>
+
+
+<!---->
+<!----></div>
+
+
+      <div class="footer__separator">·</div>
+        <a rel="nofollow" title="Friday, July 1st 2022 (12:48 pm)" href="/post/how-do-you-make-a-successful-post-on-indie-hackers-f6745260fd?commentId=-N5tnSP8fbrkUT6vzqA0" id="ember113994" class="ember-view footer__date">
+          4 years ago
+        </a>
+
+<!---->
+          <div class="footer__separator">·</div>
+            <a href="/sign-up" id="ember113995" class="ember-view footer__action footer__action--reply">
+              Reply
+            </a>
+
+<!---->
+<!---->
+    </div>
+
+
+<!----></div>
+</div>
+
+<!---->
+          <ol id="ember113996" class="comment-tree comment-tree--level-2 ember-view">
+
+<!----></ol>
+      </li>
+      <li>
+        <div id="ember113997" class="comment comment--on-desktop ember-view">
+  <a href="/sign-up" id="ember113998" class="comment-voter ember-view"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" id="ember113999" class="ember-view comment-voter__icon comment-voter__icon--upvote">  <path d="M0 15.878 l12-11.878 12 11.878-4 4.122-8-8-8 8-4-4.122z">
+<!---->  </path>
+</svg>
+
+<div class="comment-voter__score">1</div>
+
+<!----></a>
+
+<div class="comment__main">
+
+<!---->
+
+
+
+        <div id="ember114000" class="comment__content content ember-view">    <p>❤️Thank you for sharing this!</p>
+<p>It was perfect timing for me to finally write <a target="_blank" rel="nofollow" href="https://www.indiehackers.com/post/3964af9b24">my first post</a> on Indie Hackers after a few months of lurking. 🙈</p>
+
+</div>
+      
+
+    <div class="comment__footer">
+      <div class="user-link
+           
+           
+            footer__user-link">
+    <a target="_self" href="/bijanbwb?id=tljmHaUL7PMnqt0YKGfouByr4iW2" id="ember114001" class="ember-view user-link__link">
+        <picture id="ember114002" class="user-avatar ember-view user-link__avatar">  <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/52x52_tljmHaUL7PMnqt0YKGfouByr4iW2.webp" type="image/webp">
+  <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/tljmHaUL7PMnqt0YKGfouByr4iW2" type="image/png">
+    <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/tljmHaUL7PMnqt0YKGfouByr4iW2" type="image/jpeg">
+
+  <img loading="lazy" src="/nonexistent-image.png" alt="User Avatar">
+</picture>
+
+<!---->
+          <span class="user-link__name user-link__name--username">
+              bijanbwb
+          </span>
+
+
+<!---->
+      
+
+<!---->    </a>
+
+
+<!---->
+<!----></div>
+
+
+      <div class="footer__separator">·</div>
+        <a rel="nofollow" title="Wednesday, June 19th 2019 (1:47 pm)" href="/post/how-do-you-make-a-successful-post-on-indie-hackers-f6745260fd?commentId=-LhjzbUlvoQhPpvMiBNH" id="ember114003" class="ember-view footer__date">
+          7 years ago
+        </a>
+
+<!---->
+          <div class="footer__separator">·</div>
+            <a href="/sign-up" id="ember114004" class="ember-view footer__action footer__action--reply">
+              Reply
+            </a>
+
+<!---->
+<!---->
+    </div>
+
+
+<!----></div>
+</div>
+
+<!---->
+          <ol id="ember114005" class="comment-tree comment-tree--level-2 ember-view">
+
+      <li>
+        <div id="ember114006" class="comment comment--on-desktop comment--deleted ember-view">
+  <a href="/sign-up" id="ember114007" class="comment-voter comment-voter--disabled ember-view"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" id="ember114008" class="ember-view comment-voter__icon comment-voter__icon--upvote">  <path d="M0 15.878 l12-11.878 12 11.878-4 4.122-8-8-8 8-4-4.122z">
+<!---->  </path>
+</svg>
+
+<div class="comment-voter__score">1</div>
+
+<!----></a>
+
+<div class="comment__main">
+
+<!---->
+
+
+
+        <div id="ember114009" class="comment__content content ember-view">    <p><em>This comment was deleted 7 years ago.</em></p>
+
+</div>
+      
+
+    <div class="comment__footer">
+      <div class="user-link
+           
+           
+            footer__user-link">
+    <a target="_self" href="/DeletedUser?id=F8lJcs1lPcObRsiOQAT2uwl821l1" id="ember114010" class="ember-view user-link__link">
+        <picture id="ember114011" class="user-avatar ember-view user-link__avatar">  <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/52x52_F8lJcs1lPcObRsiOQAT2uwl821l1.webp" type="image/webp">
+  <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/F8lJcs1lPcObRsiOQAT2uwl821l1" type="image/png">
+    <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/F8lJcs1lPcObRsiOQAT2uwl821l1" type="image/jpeg">
+
+  <img loading="lazy" src="/nonexistent-image.png" alt="User Avatar">
+</picture>
+
+<!---->
+          <span class="user-link__name user-link__name--username">
+              DeletedUser
+          </span>
+
+
+<!---->
+      
+
+<!---->    </a>
+
+
+<!---->
+<!----></div>
+
+
+      <div class="footer__separator">·</div>
+        <a rel="nofollow" title="Wednesday, June 19th 2019 (2:16 pm)" href="/post/how-do-you-make-a-successful-post-on-indie-hackers-f6745260fd?commentId=-Lhk5D4UgePYDDtY84Xz" id="ember114012" class="ember-view footer__date">
+          7 years ago
+        </a>
+
+<!---->
+<!---->    </div>
+
+
+<!----></div>
+</div>
+
+<!---->
+          <ol id="ember114013" class="comment-tree comment-tree--level-3 ember-view">
+
+<!----></ol>
+      </li>
+</ol>
+      </li>
+      <li>
+        <div id="ember114014" class="comment comment--on-desktop ember-view">
+  <a href="/sign-up" id="ember114015" class="comment-voter ember-view"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" id="ember114016" class="ember-view comment-voter__icon comment-voter__icon--upvote">  <path d="M0 15.878 l12-11.878 12 11.878-4 4.122-8-8-8 8-4-4.122z">
+<!---->  </path>
+</svg>
+
+<div class="comment-voter__score">1</div>
+
+<!----></a>
+
+<div class="comment__main">
+
+<!---->
+
+
+
+        <div id="ember114017" class="comment__content content ember-view">    <p>Well put! Thanks for the tips.</p>
+
+</div>
+      
+
+    <div class="comment__footer">
+      <div class="user-link
+           
+           
+            footer__user-link">
+    <a target="_self" href="/elavenil?id=0qJ6KUH2tQe9MbbuBNTrtJMXnFW2" id="ember114018" class="ember-view user-link__link">
+        <picture id="ember114019" class="user-avatar ember-view user-link__avatar">  <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/52x52_0qJ6KUH2tQe9MbbuBNTrtJMXnFW2.webp" type="image/webp">
+  <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/0qJ6KUH2tQe9MbbuBNTrtJMXnFW2" type="image/png">
+    <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/0qJ6KUH2tQe9MbbuBNTrtJMXnFW2" type="image/jpeg">
+
+  <img loading="lazy" src="/nonexistent-image.png" alt="User Avatar">
+</picture>
+
+<!---->
+          <span class="user-link__name user-link__name--username">
+              elavenil
+          </span>
+
+
+<!---->
+      
+
+<!---->    </a>
+
+
+<!---->
+<!----></div>
+
+
+      <div class="footer__separator">·</div>
+        <a rel="nofollow" title="Wednesday, June 19th 2019 (6:04 am)" href="/post/how-do-you-make-a-successful-post-on-indie-hackers-f6745260fd?commentId=-LhiKXpXVf4xgxn30ZhA" id="ember114020" class="ember-view footer__date">
+          7 years ago
+        </a>
+
+<!---->
+          <div class="footer__separator">·</div>
+            <a href="/sign-up" id="ember114021" class="ember-view footer__action footer__action--reply">
+              Reply
+            </a>
+
+<!---->
+<!---->
+    </div>
+
+
+<!----></div>
+</div>
+
+<!---->
+          <ol id="ember114022" class="comment-tree comment-tree--level-2 ember-view">
+
+<!----></ol>
+      </li>
+      <li>
+        <div id="ember114023" class="comment comment--on-desktop comment--deleted ember-view">
+  <a href="/sign-up" id="ember114024" class="comment-voter comment-voter--disabled ember-view"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" id="ember114025" class="ember-view comment-voter__icon comment-voter__icon--upvote">  <path d="M0 15.878 l12-11.878 12 11.878-4 4.122-8-8-8 8-4-4.122z">
+<!---->  </path>
+</svg>
+
+<div class="comment-voter__score">1</div>
+
+<!----></a>
+
+<div class="comment__main">
+
+<!---->
+
+
+
+        <div id="ember114026" class="comment__content content ember-view">    <p><em>This comment was deleted 4 years ago.</em></p>
+
+</div>
+      
+
+    <div class="comment__footer">
+      <div class="user-link
+           
+           
+            footer__user-link">
+    <a target="_self" href="/DeletedUser?id=F8lJcs1lPcObRsiOQAT2uwl821l1" id="ember114027" class="ember-view user-link__link">
+        <picture id="ember114028" class="user-avatar ember-view user-link__avatar">  <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/52x52_F8lJcs1lPcObRsiOQAT2uwl821l1.webp" type="image/webp">
+  <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/F8lJcs1lPcObRsiOQAT2uwl821l1" type="image/png">
+    <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/F8lJcs1lPcObRsiOQAT2uwl821l1" type="image/jpeg">
+
+  <img loading="lazy" src="/nonexistent-image.png" alt="User Avatar">
+</picture>
+
+<!---->
+          <span class="user-link__name user-link__name--username">
+              DeletedUser
+          </span>
+
+
+<!---->
+      
+
+<!---->    </a>
+
+
+<!---->
+<!----></div>
+
+
+      <div class="footer__separator">·</div>
+        <a rel="nofollow" title="Thursday, January 20th 2022 (7:23 am)" href="/post/how-do-you-make-a-successful-post-on-indie-hackers-f6745260fd?commentId=-MtqMY7iHxGJzgZm6vwY" id="ember114029" class="ember-view footer__date">
+          4 years ago
+        </a>
+
+<!---->
+<!---->    </div>
+
+
+<!----></div>
+</div>
+
+<!---->
+          <ol id="ember114030" class="comment-tree comment-tree--level-2 ember-view">
+
+<!----></ol>
+      </li>
+      <li>
+        <div id="ember114031" class="comment comment--on-desktop comment--deleted ember-view">
+  <a href="/sign-up" id="ember114032" class="comment-voter comment-voter--disabled ember-view"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" id="ember114033" class="ember-view comment-voter__icon comment-voter__icon--upvote">  <path d="M0 15.878 l12-11.878 12 11.878-4 4.122-8-8-8 8-4-4.122z">
+<!---->  </path>
+</svg>
+
+<div class="comment-voter__score">2</div>
+
+<!----></a>
+
+<div class="comment__main">
+
+<!---->
+
+
+
+        <div id="ember114034" class="comment__content content ember-view">    <p><em>This comment was deleted 5 years ago.</em></p>
+
+</div>
+      
+
+    <div class="comment__footer">
+      <div class="user-link
+           
+           
+            footer__user-link">
+    <a target="_self" href="/DeletedUser?id=F8lJcs1lPcObRsiOQAT2uwl821l1" id="ember114035" class="ember-view user-link__link">
+        <picture id="ember114036" class="user-avatar ember-view user-link__avatar">  <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/52x52_F8lJcs1lPcObRsiOQAT2uwl821l1.webp" type="image/webp">
+  <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/F8lJcs1lPcObRsiOQAT2uwl821l1" type="image/png">
+    <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/F8lJcs1lPcObRsiOQAT2uwl821l1" type="image/jpeg">
+
+  <img loading="lazy" src="/nonexistent-image.png" alt="User Avatar">
+</picture>
+
+<!---->
+          <span class="user-link__name user-link__name--username">
+              DeletedUser
+          </span>
+
+
+<!---->
+      
+
+<!---->    </a>
+
+
+<!---->
+<!----></div>
+
+
+      <div class="footer__separator">·</div>
+        <a rel="nofollow" title="Sunday, August 18th 2019 (6:52 am)" href="/post/how-do-you-make-a-successful-post-on-indie-hackers-f6745260fd?commentId=-LmYUyrYWqbfJoDCEgQ8" id="ember114037" class="ember-view footer__date">
+          7 years ago
+        </a>
+
+<!---->
+<!---->    </div>
+
+
+<!----></div>
+</div>
+
+<!---->
+          <ol id="ember114038" class="comment-tree comment-tree--level-2 ember-view">
+
+<!----></ol>
+      </li>
+      <li>
+        <div id="ember114039" class="comment comment--on-desktop comment--deleted ember-view">
+  <a href="/sign-up" id="ember114040" class="comment-voter comment-voter--disabled ember-view"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" id="ember114041" class="ember-view comment-voter__icon comment-voter__icon--upvote">  <path d="M0 15.878 l12-11.878 12 11.878-4 4.122-8-8-8 8-4-4.122z">
+<!---->  </path>
+</svg>
+
+<div class="comment-voter__score">1</div>
+
+<!----></a>
+
+<div class="comment__main">
+
+<!---->
+
+
+
+        <div id="ember114042" class="comment__content content ember-view">    <p><em>This comment was deleted 7 years ago.</em></p>
+
+</div>
+      
+
+    <div class="comment__footer">
+      <div class="user-link
+           
+           
+            footer__user-link">
+    <a target="_self" href="/DeletedUser?id=F8lJcs1lPcObRsiOQAT2uwl821l1" id="ember114043" class="ember-view user-link__link">
+        <picture id="ember114044" class="user-avatar ember-view user-link__avatar">  <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/52x52_F8lJcs1lPcObRsiOQAT2uwl821l1.webp" type="image/webp">
+  <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/F8lJcs1lPcObRsiOQAT2uwl821l1" type="image/png">
+    <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/F8lJcs1lPcObRsiOQAT2uwl821l1" type="image/jpeg">
+
+  <img loading="lazy" src="/nonexistent-image.png" alt="User Avatar">
+</picture>
+
+<!---->
+          <span class="user-link__name user-link__name--username">
+              DeletedUser
+          </span>
+
+
+<!---->
+      
+
+<!---->    </a>
+
+
+<!---->
+<!----></div>
+
+
+      <div class="footer__separator">·</div>
+        <a rel="nofollow" title="Wednesday, June 19th 2019 (2:15 pm)" href="/post/how-do-you-make-a-successful-post-on-indie-hackers-f6745260fd?commentId=-Lhk4zO2hBcNxioe_xXo" id="ember114045" class="ember-view footer__date">
+          7 years ago
+        </a>
+
+<!---->
+<!---->    </div>
+
+
+<!----></div>
+</div>
+
+<!---->
+          <ol id="ember114046" class="comment-tree comment-tree--level-2 ember-view">
+
+<!----></ol>
+      </li>
+      <li>
+        <div id="ember114047" class="comment comment--on-desktop comment--deleted ember-view">
+  <a href="/sign-up" id="ember114048" class="comment-voter comment-voter--disabled ember-view"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" id="ember114049" class="ember-view comment-voter__icon comment-voter__icon--upvote">  <path d="M0 15.878 l12-11.878 12 11.878-4 4.122-8-8-8 8-4-4.122z">
+<!---->  </path>
+</svg>
+
+<div class="comment-voter__score">3</div>
+
+<!----></a>
+
+<div class="comment__main">
+
+<!---->
+
+
+
+        <div id="ember114050" class="comment__content content ember-view">    <p><em>This comment was deleted 3 years ago.</em></p>
+
+</div>
+      
+
+    <div class="comment__footer">
+      <div class="user-link
+           
+           
+            footer__user-link">
+    <a target="_self" href="/DeletedUser?id=F8lJcs1lPcObRsiOQAT2uwl821l1" id="ember114051" class="ember-view user-link__link">
+        <picture id="ember114052" class="user-avatar ember-view user-link__avatar">  <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/52x52_F8lJcs1lPcObRsiOQAT2uwl821l1.webp" type="image/webp">
+  <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/F8lJcs1lPcObRsiOQAT2uwl821l1" type="image/png">
+    <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/F8lJcs1lPcObRsiOQAT2uwl821l1" type="image/jpeg">
+
+  <img loading="lazy" src="/nonexistent-image.png" alt="User Avatar">
+</picture>
+
+<!---->
+          <span class="user-link__name user-link__name--username">
+              DeletedUser
+          </span>
+
+
+<!---->
+      
+
+<!---->    </a>
+
+
+<!---->
+<!----></div>
+
+
+      <div class="footer__separator">·</div>
+        <a rel="nofollow" title="Wednesday, June 19th 2019 (9:49 am)" href="/post/how-do-you-make-a-successful-post-on-indie-hackers-f6745260fd?commentId=-Lhj8092df2nEI0beAmx" id="ember114053" class="ember-view footer__date">
+          7 years ago
+        </a>
+
+<!---->
+<!---->    </div>
+
+
+<!----></div>
+</div>
+
+<!---->
+          <ol id="ember114054" class="comment-tree comment-tree--level-2 ember-view">
+
+      <li>
+        <div id="ember114055" class="comment comment--on-desktop ember-view">
+  <a href="/sign-up" id="ember114056" class="comment-voter ember-view"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" id="ember114057" class="ember-view comment-voter__icon comment-voter__icon--upvote">  <path d="M0 15.878 l12-11.878 12 11.878-4 4.122-8-8-8 8-4-4.122z">
+<!---->  </path>
+</svg>
+
+<div class="comment-voter__score">2</div>
+
+<!----></a>
+
+<div class="comment__main">
+
+<!---->
+
+
+
+        <div id="ember114058" class="comment__content content ember-view">    <p>Fizzle is great!</p>
+<p>Edit: I'm not <em>quite</em> their target market, but I like the people running it and the community.</p>
+
+</div>
+      
+
+    <div class="comment__footer">
+      <div class="user-link
+           
+           
+            footer__user-link">
+    <a target="_self" href="/alchemist?id=LiofXYXkILfSwOL4AESMQUUWuIx2" id="ember114059" class="ember-view user-link__link">
+        <picture id="ember114060" class="user-avatar ember-view user-link__avatar">  <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/52x52_LiofXYXkILfSwOL4AESMQUUWuIx2.webp" type="image/webp">
+  <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/LiofXYXkILfSwOL4AESMQUUWuIx2" type="image/png">
+    <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/LiofXYXkILfSwOL4AESMQUUWuIx2" type="image/jpeg">
+
+  <img loading="lazy" src="/nonexistent-image.png" alt="User Avatar">
+</picture>
+
+<!---->
+          <span class="user-link__name user-link__name--username">
+              alchemist
+          </span>
+
+
+<!---->
+      
+
+<!---->    </a>
+
+
+<!---->
+<!----></div>
+
+
+      <div class="footer__separator">·</div>
+        <a rel="nofollow" title="Saturday, June 22nd 2019 (6:37 pm)" href="/post/how-do-you-make-a-successful-post-on-indie-hackers-f6745260fd?commentId=-Li-Taw66RUcb84H2nyO" id="ember114061" class="ember-view footer__date">
+          7 years ago
+        </a>
+
+<!---->
+          <div class="footer__separator">·</div>
+            <a href="/sign-up" id="ember114062" class="ember-view footer__action footer__action--reply">
+              Reply
+            </a>
+
+<!---->
+<!---->
+    </div>
+
+
+<!----></div>
+</div>
+
+<!---->
+          <ol id="ember114063" class="comment-tree comment-tree--level-3 ember-view">
+
+      <li>
+        <div id="ember114064" class="comment comment--on-desktop comment--deleted ember-view">
+  <a href="/sign-up" id="ember114065" class="comment-voter comment-voter--disabled ember-view"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" id="ember114066" class="ember-view comment-voter__icon comment-voter__icon--upvote">  <path d="M0 15.878 l12-11.878 12 11.878-4 4.122-8-8-8 8-4-4.122z">
+<!---->  </path>
+</svg>
+
+<div class="comment-voter__score">2</div>
+
+<!----></a>
+
+<div class="comment__main">
+
+<!---->
+
+
+
+        <div id="ember114067" class="comment__content content ember-view">    <p><em>This comment was deleted 3 years ago.</em></p>
+
+</div>
+      
+
+    <div class="comment__footer">
+      <div class="user-link
+           
+           
+            footer__user-link">
+    <a target="_self" href="/DeletedUser?id=F8lJcs1lPcObRsiOQAT2uwl821l1" id="ember114068" class="ember-view user-link__link">
+        <picture id="ember114069" class="user-avatar ember-view user-link__avatar">  <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/52x52_F8lJcs1lPcObRsiOQAT2uwl821l1.webp" type="image/webp">
+  <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/F8lJcs1lPcObRsiOQAT2uwl821l1" type="image/png">
+    <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/F8lJcs1lPcObRsiOQAT2uwl821l1" type="image/jpeg">
+
+  <img loading="lazy" src="/nonexistent-image.png" alt="User Avatar">
+</picture>
+
+<!---->
+          <span class="user-link__name user-link__name--username">
+              DeletedUser
+          </span>
+
+
+<!---->
+      
+
+<!---->    </a>
+
+
+<!---->
+<!----></div>
+
+
+      <div class="footer__separator">·</div>
+        <a rel="nofollow" title="Saturday, June 22nd 2019 (9:37 pm)" href="/post/how-do-you-make-a-successful-post-on-indie-hackers-f6745260fd?commentId=-Li06xcusgZ75xYZfJlQ" id="ember114070" class="ember-view footer__date">
+          7 years ago
+        </a>
+
+<!---->
+<!---->    </div>
+
+
+<!----></div>
+</div>
+
+<!---->
+          <ol id="ember114071" class="comment-tree comment-tree--level-4 ember-view">
+
+<!----></ol>
+      </li>
+</ol>
+      </li>
+      <li>
+        <div id="ember114072" class="comment comment--on-desktop ember-view">
+  <a href="/sign-up" id="ember114073" class="comment-voter ember-view"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" id="ember114074" class="ember-view comment-voter__icon comment-voter__icon--upvote">  <path d="M0 15.878 l12-11.878 12 11.878-4 4.122-8-8-8 8-4-4.122z">
+<!---->  </path>
+</svg>
+
+<div class="comment-voter__score">1</div>
+
+<!----></a>
+
+<div class="comment__main">
+
+<!---->
+
+
+
+        <div id="ember114075" class="comment__content content ember-view">    <p>Go for it!</p>
+
+</div>
+      
+
+    <div class="comment__footer">
+      <div class="user-link
+           
+           
+            footer__user-link">
+    <a target="_self" href="/csallen?id=ibTLPyjwVebnZjMGKvz6ztarnuV2" id="ember114076" class="ember-view user-link__link">
+        <picture id="ember114077" class="user-avatar ember-view user-link__avatar">  <source alt="Avatar for Courtland Allen" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/52x52_ibTLPyjwVebnZjMGKvz6ztarnuV2.webp" type="image/webp">
+  <source alt="Avatar for Courtland Allen" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/ibTLPyjwVebnZjMGKvz6ztarnuV2" type="image/png">
+    <source alt="Avatar for Courtland Allen" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/ibTLPyjwVebnZjMGKvz6ztarnuV2" type="image/jpeg">
+
+  <img loading="lazy" src="/nonexistent-image.png" alt="Avatar for Courtland Allen">
+</picture>
+
+<!---->
+          <span class="user-link__name user-link__name--username">
+              csallen
+          </span>
+
+
+<!---->
+      
+
+<!---->    </a>
+
+
+<!---->
+<!----></div>
+
+
+      <div class="footer__separator">·</div>
+        <a rel="nofollow" title="Wednesday, June 19th 2019 (4:58 pm)" href="/post/how-do-you-make-a-successful-post-on-indie-hackers-f6745260fd?commentId=-LhkfCjgg67zlWfT2NVn" id="ember114078" class="ember-view footer__date">
+          7 years ago
+        </a>
+
+<!---->
+          <div class="footer__separator">·</div>
+            <a href="/sign-up" id="ember114079" class="ember-view footer__action footer__action--reply">
+              Reply
+            </a>
+
+<!---->
+<!---->
+    </div>
+
+
+<!----></div>
+</div>
+
+<!---->
+          <ol id="ember114080" class="comment-tree comment-tree--level-3 ember-view">
+
+      <li>
+        <div id="ember114081" class="comment comment--on-desktop comment--deleted ember-view">
+  <a href="/sign-up" id="ember114082" class="comment-voter comment-voter--disabled ember-view"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" id="ember114083" class="ember-view comment-voter__icon comment-voter__icon--upvote">  <path d="M0 15.878 l12-11.878 12 11.878-4 4.122-8-8-8 8-4-4.122z">
+<!---->  </path>
+</svg>
+
+<div class="comment-voter__score">1</div>
+
+<!----></a>
+
+<div class="comment__main">
+
+<!---->
+
+
+
+        <div id="ember114084" class="comment__content content ember-view">    <p><em>This comment was deleted 3 years ago.</em></p>
+
+</div>
+      
+
+    <div class="comment__footer">
+      <div class="user-link
+           
+           
+            footer__user-link">
+    <a target="_self" href="/DeletedUser?id=F8lJcs1lPcObRsiOQAT2uwl821l1" id="ember114085" class="ember-view user-link__link">
+        <picture id="ember114086" class="user-avatar ember-view user-link__avatar">  <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/52x52_F8lJcs1lPcObRsiOQAT2uwl821l1.webp" type="image/webp">
+  <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/F8lJcs1lPcObRsiOQAT2uwl821l1" type="image/png">
+    <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/F8lJcs1lPcObRsiOQAT2uwl821l1" type="image/jpeg">
+
+  <img loading="lazy" src="/nonexistent-image.png" alt="User Avatar">
+</picture>
+
+<!---->
+          <span class="user-link__name user-link__name--username">
+              DeletedUser
+          </span>
+
+
+<!---->
+      
+
+<!---->    </a>
+
+
+<!---->
+<!----></div>
+
+
+      <div class="footer__separator">·</div>
+        <a rel="nofollow" title="Wednesday, June 19th 2019 (8:50 pm)" href="/post/how-do-you-make-a-successful-post-on-indie-hackers-f6745260fd?commentId=-LhlVHZu4ZMNYc0IFokl" id="ember114087" class="ember-view footer__date">
+          7 years ago
+        </a>
+
+<!---->
+<!---->    </div>
+
+
+<!----></div>
+</div>
+
+<!---->
+          <ol id="ember114088" class="comment-tree comment-tree--level-4 ember-view">
+
+<!----></ol>
+      </li>
+</ol>
+      </li>
+</ol>
+      </li>
+</ol>
+
+  
+
+</div>
+        </div>
+    </div>
+
+
+      <div id="ember114089" class="post-page__recommendations ember-view">  <div class="post-page__recommendations-heading">
+    Trending on Indie Hackers
+  </div>
+
+  <div class="post-page__recommendations-list">
+        <a href="/post/09925bc444" id="ember114090" class="ember-view post-page__recommendation">
+            <img alt class="post-page__recommendation-image">
+          <span class="post-page__recommendation-text">
+            <span class="post-page__recommendation-title">
+              I've been reading 50 indie builder posts a day for the past month. Here's the pattern nobody talks about.
+            </span>
+            <span class="post-page__recommendation-footer">
+              <picture id="ember114091" class="user-avatar ember-view post-page__recommendation-avatar">  <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/52x52_aSs0kEvIWzMqLsioJW8LC9V2v4l2.webp" type="image/webp">
+  <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/aSs0kEvIWzMqLsioJW8LC9V2v4l2" type="image/png">
+    <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/aSs0kEvIWzMqLsioJW8LC9V2v4l2" type="image/jpeg">
+
+  <img loading="lazy" src="/nonexistent-image.png" alt="User Avatar">
+</picture>
+              163 comments
+              <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" id="ember114092" class="ember-view">  <path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z">
+<!---->  </path>
+</svg>
+            </span>
+          </span>
+        </a>
+        <a href="/post/e52d99adad" id="ember114093" class="ember-view post-page__recommendation">
+            <img alt class="post-page__recommendation-image">
+          <span class="post-page__recommendation-text">
+            <span class="post-page__recommendation-title">
+              I shipped 3 features this weekend based entirely on community feedback. Here's what I built and why.
+            </span>
+            <span class="post-page__recommendation-footer">
+              <picture id="ember114094" class="user-avatar ember-view post-page__recommendation-avatar">  <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/52x52_DWbock2DNNZRzyqLsLv5YjkyZsn1.webp" type="image/webp">
+  <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/DWbock2DNNZRzyqLsLv5YjkyZsn1" type="image/png">
+    <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/DWbock2DNNZRzyqLsLv5YjkyZsn1" type="image/jpeg">
+
+  <img loading="lazy" src="/nonexistent-image.png" alt="User Avatar">
+</picture>
+              128 comments
+              <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" id="ember114095" class="ember-view">  <path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z">
+<!---->  </path>
+</svg>
+            </span>
+          </span>
+        </a>
+        <a href="/post/a8a6297db3" id="ember114096" class="ember-view post-page__recommendation">
+            <img alt class="post-page__recommendation-image">
+          <span class="post-page__recommendation-text">
+            <span class="post-page__recommendation-title">
+              Finally reached 100 users in just 12 days 🚀
+            </span>
+            <span class="post-page__recommendation-footer">
+              <picture id="ember114097" class="user-avatar ember-view post-page__recommendation-avatar">  <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/52x52_SA1QPkM0DKMZG78YQAiABwMEUjR2.webp" type="image/webp">
+  <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/SA1QPkM0DKMZG78YQAiABwMEUjR2" type="image/png">
+    <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/SA1QPkM0DKMZG78YQAiABwMEUjR2" type="image/jpeg">
+
+  <img loading="lazy" src="/nonexistent-image.png" alt="User Avatar">
+</picture>
+              119 comments
+              <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" id="ember114098" class="ember-view">  <path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z">
+<!---->  </path>
+</svg>
+            </span>
+          </span>
+        </a>
+        <a href="/post/5bf3eb144d" id="ember114099" class="ember-view post-page__recommendation">
+            <img alt class="post-page__recommendation-image">
+          <span class="post-page__recommendation-text">
+            <span class="post-page__recommendation-title">
+              I'm a lawyer who launched an AI contract tool on Product Hunt today — here's what building it as a non-technical founder actually felt like
+            </span>
+            <span class="post-page__recommendation-footer">
+              <picture id="ember114100" class="user-avatar ember-view post-page__recommendation-avatar">  <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/52x52_r0PkBcXMDqN3zg71uZvLqyODeU93.webp" type="image/webp">
+  <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/r0PkBcXMDqN3zg71uZvLqyODeU93" type="image/png">
+    <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/r0PkBcXMDqN3zg71uZvLqyODeU93" type="image/jpeg">
+
+  <img loading="lazy" src="/nonexistent-image.png" alt="User Avatar">
+</picture>
+              99 comments
+              <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" id="ember114101" class="ember-view">  <path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z">
+<!---->  </path>
+</svg>
+            </span>
+          </span>
+        </a>
+        <a href="/post/53f0a85fe3" id="ember114102" class="ember-view post-page__recommendation">
+            <img alt class="post-page__recommendation-image">
+          <span class="post-page__recommendation-text">
+            <span class="post-page__recommendation-title">
+              I realized showing problems isn’t enough — so I built this
+            </span>
+            <span class="post-page__recommendation-footer">
+              <picture id="ember114103" class="user-avatar ember-view post-page__recommendation-avatar">  <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/52x52_07nIhcNwlmO4xpBYMQZmdgoLj1y1.webp" type="image/webp">
+  <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/07nIhcNwlmO4xpBYMQZmdgoLj1y1" type="image/png">
+    <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/07nIhcNwlmO4xpBYMQZmdgoLj1y1" type="image/jpeg">
+
+  <img loading="lazy" src="/nonexistent-image.png" alt="User Avatar">
+</picture>
+              32 comments
+              <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" id="ember114104" class="ember-view">  <path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z">
+<!---->  </path>
+</svg>
+            </span>
+          </span>
+        </a>
+        <a href="/post/62997ab10c" id="ember114105" class="ember-view post-page__recommendation">
+            <img alt class="post-page__recommendation-image">
+          <span class="post-page__recommendation-text">
+            <span class="post-page__recommendation-title">
+              Maintaining open-source projects that millions use
+            </span>
+            <span class="post-page__recommendation-footer">
+              <picture id="ember114106" class="user-avatar ember-view post-page__recommendation-avatar">  <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/52x52_5KRGGpyxLlNGCwUQtSnV120JNf03.webp" type="image/webp">
+  <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/5KRGGpyxLlNGCwUQtSnV120JNf03" type="image/png">
+    <source alt="User Avatar" loading="lazy" srcset="https://storage.googleapis.com/indie-hackers.appspot.com/avatars/5KRGGpyxLlNGCwUQtSnV120JNf03" type="image/jpeg">
+
+  <img loading="lazy" src="/nonexistent-image.png" alt="User Avatar">
+</picture>
+              27 comments
+              <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" id="ember114107" class="ember-view">  <path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z">
+<!---->  </path>
+</svg>
+            </span>
+          </span>
+        </a>
+  </div>
+</div>
+
+
+
+<!---->
+<!---->
+<!---->  </div>
+
+
+
+<!----></div>
+
+
+<!---->
+
+  <footer id="ember114108" class="site-footer ember-view post-page__footer-component ">
+  <div id="ember114109" class="mailing-list-form ember-view site-footer__mailing-list-form">
+<form action="https://app.convertkit.com/landing_pages/191452/subscribe" class="mailing-list-form__form">
+
+    <p class="mailing-list-form__title">Stay informed as an indie hacker.</p>
+
+    <p class="mailing-list-form__subtitle">Market insights that help you start and grow your business.</p>
+
+    <div class="mailing-list-form__captcha-wrapper" style="position:absolute !important; left:-999em !important;">
+      <input placeholder="We use this field to detect spam bots. If you fill this in, you will be marked as a spammer." value type="text">
+    </div>
+
+    <div class="mailing-list-form__email-wrapper">
+      <input value name="email" required="true" placeholder="Enter email address" id="ember114110" class="ember-text-field ember-view mailing-list-form__email-input" type="email">
+<!---->    </div>
+
+
+    <button aria-label="Submit Mailing List Form" class="mailing-list-form__submit-button" type="submit">
+      <div>
+          <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" id="ember114111" class="ember-view">  <path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z">
+<!---->  </path>
+</svg>
+        <span>Subscribe</span>
+      </div>
+    </button>
+</form>
+</div>
+
+  <hr class="site-footer__border">
+
+
+<div class="site-footer__content">
+
+  <div class="site-footer__column site-footer__info">
+    <div class="site-footer__name-and-attribution">
+      <a href="/" id="ember114112" class="ember-view site-footer__logo">
+        <img alt="Indie Hackers logo glyph" class="site-footer__logo-glyph" height="24" loading="lazy" src="https://storage.googleapis.com/indie-hackers.appspot.com/branding/logos/indie-hackers-logo__glyph--light.svg" width="24">
+        <img alt="Indie Hackers logotype" class="site-footer__logo-type" height="11" loading="lazy" src="https://storage.googleapis.com/indie-hackers.appspot.com/branding/logos/indie-hackers-logo__type--light.svg" width="108.63">
+      </a>
+    </div>
+
+    <p class="site-footer__explanation">
+      Follow <a class="site-footer__follow-us" href="https://twitter.com/IndieHackers" target="_blank" rel="noopener noreferrer">
+        @IndieHackers
+      </a> on X for stories and insights about founders building profitable online businesses, and to connect with others in the Indie Hackers community.
+    </p>
+
+    <div class="site-footer__info-footer">
+      <a href="https://www.indiehackers.com" target="_blank" class="site-footer__link" rel="noopener noreferrer">© Indie Hackers, Inc.</a>
+      <span class="site-footer__info-separator">·</span>
+      <a href="/about" id="ember114113" class="ember-view site-footer__link">FAQ</a>
+      <span class="site-footer__info-separator">·</span>
+      <a href="/terms" id="ember114114" class="ember-view site-footer__link">Terms</a>
+      <span class="site-footer__info-separator">·</span>
+      <a href="/privacy" id="ember114115" class="ember-view site-footer__link">Privacy</a>
+      <span class="site-footer__info-separator">·</span>
+      <a href="#" id="ot-sdk-btn" class="ot-sdk-show-settings" onclick="OneTrust.ToggleInfoDisplay()">Cookie Settings</a>/
+      <a href="/cookie-policy" id="ember114116" class="ember-view site-footer__link">Policy</a>
+      <span class="site-footer__info-separator">·</span>
+      <a aria-label="Indie Hackers on Facebook" class="site-footer__social-link" href="https://www.facebook.com/IndieHackers" target="_blank" rel="noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" id="ember114117" class="ember-view">  <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z">
+<!---->  </path>
+</svg>
+      </a>
+      <a aria-label="Indie Hackers on X" class="site-footer__social-link" href="https://twitter.com/IndieHackers" target="_blank" rel="noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 462.799" id="ember114118" class="ember-view">  <path d="M403.229 0h78.506L310.219 196.04 512 462.799H354.002L230.261 301.007 88.669 462.799h-78.56l183.455-209.683L0 0h161.999l111.856 147.88L403.229 0zm-27.556 415.805h43.505L138.363 44.527h-46.68l283.99 371.278z">
+<!---->  </path>
+</svg>
+      </a>
+      <a aria-label="Indie Hackers on Instagram" class="site-footer__social-link" href="https://instagram.com/indie_hackers" target="_blank" rel="noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" id="ember114119" class="ember-view">  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z">
+<!---->  </path>
+</svg>
+      </a>
+    </div>
+  </div>
+
+
+  <div class="site-footer__column site-footer__community">
+    <h4 class="site-footer__header">
+      <a href="/" id="ember114120" class="ember-view site-footer__header-link">Community</a>
+    </h4>
+    <div class="site-footer__list-of-links">
+      <a href="/groups" id="ember114121" class="ember-view site-footer__link">Groups</a>
+      <a href="/meetups" id="ember114122" class="ember-view site-footer__link">Meetups</a>
+      <a href="/" id="ember114123" class="ember-view site-footer__link">Top Today</a>
+      <a href="/top/week-of-2026-03-23" id="ember114124" class="ember-view site-footer__link">Top This Week</a>
+      <a href="/top/month-of-2026-03" id="ember114125" class="ember-view site-footer__link">Top This Month</a>
+        <a href="/sign-up" id="ember114126" class="ember-view site-footer__action">
+          Join
+          <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" id="ember114127" class="ember-view">  <path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z">
+<!---->  </path>
+</svg>
+        </a>
+          </div>
+  </div>
+
+
+  <div class="site-footer__column site-footer__products">
+    <h4 class="site-footer__header">
+      <a href="/products" id="ember114128" class="ember-view site-footer__header-link">Products</a>
+    </h4>
+    <div class="site-footer__list-of-links">
+      <a href="/products" id="ember114129" class="ember-view site-footer__link">All Products</a>
+      <a href="/products?revenueVerification=stripe&amp;sorting=highest-revenue" id="ember114130" class="ember-view site-footer__link">Highest Revenue</a>
+      <a href="/products?commitment=side-project" id="ember114131" class="ember-view site-footer__link">Side Projects</a>
+      <a href="/products?funding=self" id="ember114132" class="ember-view site-footer__link">Self-Funded</a>
+      <a href="/products/new" id="ember114133" class="ember-view site-footer__action">
+        Add Yours
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" id="ember114134" class="ember-view">  <path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z">
+<!---->  </path>
+</svg>
+      </a>
+    </div>
+  </div>
+
+
+  <div class="site-footer__column site-footer__databases">
+    <h4 class="site-footer__header">
+      <a href="/stories" id="ember114135" class="ember-view site-footer__header-link">Databases</a>
+    </h4>
+    <div class="site-footer__list-of-links">
+      <a href="/ideas" id="ember114136" class="ember-view site-footer__link">Ideas</a>
+      <a href="/products" id="ember114137" class="ember-view site-footer__link">Products</a>
+      <a href="/stories" id="ember114138" class="ember-view site-footer__link">Stories</a>
+    </div>
+  </div>
+</div>
+</footer>
+
+</div>
+<script type="fastboot/shoebox" id="shoebox-isgbo">null</script><script type="x/boundary" id="fastboot-body-end"></script><script defer src="/assets/scripts/post-bfcb8f7eaaad043b07a73cb9052700.js"></script></body></html>

@@ -9,7 +9,7 @@ import { parsePostDetailFromHtml } from '../../../src/parsers/post.js';
 describe('parsePostDetailFromHtml', () => {
   it('parses the required fields and comments', async () => {
     const html = await readFile(
-      path.join(process.cwd(), 'tests/fixtures/html/post-page.html'),
+      path.join(process.cwd(), 'tests/fixtures/html/post-page.sample.html'),
       'utf8',
     );
     const expected = JSON.parse(
